@@ -55,10 +55,26 @@
 
 
   /* ============================================================
-     1b. SITE CONFIG — populate contact/social links from config.js
+     1b. SITE CONFIG — colors + contact/social links from config.js
      ============================================================ */
   (function applyConfig() {
     if (typeof siteConfig === 'undefined') return;
+
+    /* Apply color palette as CSS custom properties */
+    const c = siteConfig.colors;
+    if (c) {
+      const r = document.documentElement;
+      if (c.main)           r.style.setProperty('--color-navy',        c.main);
+      if (c.mainDark)       r.style.setProperty('--color-navy-dark',   c.mainDark);
+      if (c.mainLight)      r.style.setProperty('--color-navy-light',  c.mainLight);
+      if (c.secondary)      r.style.setProperty('--color-teal',        c.secondary);
+      if (c.secondaryDark)  r.style.setProperty('--color-teal-dark',   c.secondaryDark);
+      if (c.secondaryLight) r.style.setProperty('--color-teal-light',  c.secondaryLight);
+      if (c.background)     r.style.setProperty('--color-white',       c.background);
+      if (c.text)           r.style.setProperty('--color-text',        c.text);
+    }
+
+    /* Apply contact/social links */
     document.querySelectorAll('[data-config]').forEach(el => {
       const key = el.getAttribute('data-config');
       if (key === 'whatsapp') el.href = 'https://wa.me/' + siteConfig.whatsapp;

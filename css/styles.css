@@ -66,7 +66,11 @@
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: clip; /* prevent horizontal scroll on any viewport — clip doesn't break position:fixed */
+}
 
 body {
   font-family: var(--font-body);
@@ -74,6 +78,13 @@ body {
   background-color: var(--color-white);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Hero: use dvh so the hero fills the real visible area on mobile browsers
+   (100vh includes the address bar; 100dvh excludes it) */
+.hero {
+  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 img { max-width: 100%; display: block; }
@@ -498,6 +509,18 @@ button { font-family: var(--font-body); }
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-md);
 }
+
+/* Prevent grid/flex children from overflowing their allocated column */
+.services__grid > *,
+.why-us__grid > *,
+.values-grid > *,
+.mv__grid > *,
+.step-timeline > *,
+.related-services__grid > *,
+.about-preview__inner > *,
+.story__inner > *,
+.contact__cards > *,
+.team-grid > * { min-width: 0; }
 
 .services__grid--overview {
   grid-template-columns: repeat(2, 1fr);
@@ -1229,7 +1252,7 @@ button { font-family: var(--font-body); }
 [data-theme="dark"] .form-input::placeholder,
 [data-theme="dark"] .form-textarea::placeholder { color: #4a5568; }
 
-/* Mobile navbar — dark mode overrides */
+/* Solid-navbar dark mode overrides (mobile ≤768px always has solid navbar) */
 @media (max-width: 768px) {
   [data-theme="dark"] .navbar        { background-color: #1a1f36; }
   [data-theme="dark"] .navbar__menu  { background-color: #1a1f36; }

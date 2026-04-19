@@ -5,6 +5,26 @@
 
 
 /* ============================================================
+   MEDIUM  (769px – 1023px) — tablets landscape, foldables unfolded
+   At this width the desktop nav still fits; only layout grids need adjustment.
+   ============================================================ */
+@media (min-width: 769px) and (max-width: 1023px) {
+
+  /* ---- Grids: 4-col is too cramped here, drop to 2 ---- */
+  .services__grid          { grid-template-columns: repeat(2, 1fr); }
+  .why-us__grid            { grid-template-columns: repeat(2, 1fr); }
+  .values-grid             { grid-template-columns: repeat(2, 1fr); }
+  .step-timeline           { grid-template-columns: repeat(2, 1fr); }
+  .step-timeline::before   { display: none; }
+  .related-services__grid  { grid-template-columns: repeat(2, 1fr); }
+
+  /* ---- Two-column prose+image layouts: stack vertically ---- */
+  .about-preview__inner    { grid-template-columns: 1fr; gap: var(--space-xl); }
+  .story__inner            { grid-template-columns: 1fr; gap: var(--space-xl); }
+}
+
+
+/* ============================================================
    TABLET  (≤ 768px)
    ============================================================ */
 @media (max-width: 768px) {

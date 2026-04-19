@@ -4,6 +4,21 @@
    ============================================================ */
 const siteConfig = {
 
+  /* ---- Brand -------------------------------------------------------
+     text1 / text2 : the two-tone text logo ("Hey" in accent, "Reg" in main color)
+     logo          : set to an image path (e.g. 'img/logo.svg') to switch to an image;
+                     leave '' to keep the text logo
+     logoAlt       : alt text used when logo image is active
+     ----------------------------------------------------------------- */
+  brand: {
+    name:    'HeyReg',
+    text1:   'Hey',        // rendered in accent color
+    text2:   'Reg',        // rendered in main color
+    logo:    '',           // e.g. 'img/logo.svg'
+    logoAlt: 'HeyReg',
+    favicon: '',           // browser tab icon, e.g. 'img/favicon.png' or 'img/favicon.ico'
+  },
+
   /* ---- Contact & social ---- */
   whatsapp:     '50662889402',          // raw digits — used to build wa.me URLs
   phoneDisplay: '+506 6288-9402',       // formatted number shown as text on contact page

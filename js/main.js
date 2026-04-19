@@ -61,6 +61,37 @@
   (function applyConfig() {
     if (typeof siteConfig === 'undefined') return;
 
+    /* Brand name / logo — navbar and footer */
+    const b = siteConfig.brand;
+    if (b) {
+      const isImg = !!b.logo;
+      const navHTML    = isImg
+        ? `<img src="${b.logo}" alt="${b.logoAlt || b.name}" class="navbar__logo-img">`
+        : `<span class="logo-accent">${b.text1 || ''}</span>${b.text2 || ''}`;
+      const footerHTML = isImg
+        ? `<img src="${b.logo}" alt="${b.logoAlt || b.name}" class="footer__logo-img">`
+        : `<span class="logo-accent">${b.text1 || ''}</span>${b.text2 || ''}`;
+
+      document.querySelectorAll('.navbar__logo').forEach(el => {
+        el.innerHTML = navHTML;
+        if (b.name) el.setAttribute('aria-label', b.name + ' — Home');
+      });
+      document.querySelectorAll('.footer__brand').forEach(el => {
+        el.innerHTML = footerHTML;
+      });
+
+      /* Favicon — inject or update <link rel="icon"> in <head> */
+      if (b.favicon) {
+        let link = document.querySelector('link[rel="icon"]');
+        if (!link) {
+          link = document.createElement('link');
+          link.rel = 'icon';
+          document.head.appendChild(link);
+        }
+        link.href = b.favicon;
+      }
+    }
+
     /* Apply color palette as CSS custom properties */
     const c = siteConfig.colors;
     if (c) {

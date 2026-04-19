@@ -1,0 +1,163 @@
+/* ============================================================
+   responsive.css — Breakpoints for tablet (≤768px) and mobile (≤480px).
+   Supplements styles.css — relies on the same CSS custom properties.
+   ============================================================ */
+
+
+/* ============================================================
+   TABLET  (≤ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* ---- Navbar: hamburger mode ---- */
+  .navbar__hamburger { display: flex; }
+
+  /* Nav panel slides down below navbar bar */
+  .navbar__menu {
+    display: none;
+    position: absolute;
+    top: var(--navbar-height);
+    left: 0; right: 0;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-sm) 0 var(--space-md);
+    flex: unset;
+    max-height: calc(100vh - var(--navbar-height));
+    overflow-y: auto;
+  }
+
+  .navbar__menu.open { display: block; }
+
+  .navbar__list {
+    flex-direction: column;
+    align-items: stretch;
+    padding-inline: var(--space-md);
+    gap: 0;
+  }
+
+  .navbar__item { width: 100%; }
+
+  .navbar__link {
+    color: var(--color-navy);
+    padding-block: 0.75rem;
+  }
+
+  /* Mobile navbar always appears solid */
+  .navbar { background-color: var(--color-white); box-shadow: var(--shadow-sm); }
+  .navbar__logo  { color: var(--color-navy); }
+  .lang-btn      { color: var(--color-navy); }
+  .lang-divider  { color: rgba(26,46,90,0.3); }
+  .hamburger-line { background-color: var(--color-navy); }
+
+  /* Submenu on mobile: static position, indented */
+  .submenu {
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0 0 0 var(--space-md);
+    background: transparent;
+    animation: none;
+    min-width: unset;
+  }
+
+  .submenu a {
+    color: var(--color-navy);
+    padding: 0.5rem 0;
+    font-size: var(--fs-sm);
+  }
+
+  .submenu a:hover { background: transparent; color: var(--color-teal); }
+
+  /* Submenu is hidden until .submenu--open is added by JS */
+  .navbar__item--has-submenu > .submenu { display: none; }
+  .navbar__item--has-submenu > .submenu.submenu--open { display: block; }
+
+  /* ---- Hero ---- */
+  .hero__title    { font-size: var(--fs-3xl); }
+  .hero__subtitle { font-size: var(--fs-base); }
+
+  /* ---- Page hero ---- */
+  .page-hero__title { font-size: var(--fs-2xl); }
+
+  /* ---- About preview (home) ---- */
+  .about-preview__inner {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  /* ---- Services grid ---- */
+  .services__grid          { grid-template-columns: repeat(2, 1fr); }
+  .services__grid--overview { grid-template-columns: 1fr; }
+
+  /* ---- Why Us ---- */
+  .why-us__grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* ---- Contact cards ---- */
+  .contact__cards { grid-template-columns: 1fr; max-width: 420px; }
+
+  /* ---- Office info ---- */
+  .office-info__grid { grid-template-columns: 1fr; }
+
+  /* ---- About page ---- */
+  .story__inner  { grid-template-columns: 1fr; gap: var(--space-xl); }
+  .mv__grid      { grid-template-columns: 1fr; }
+  .values-grid   { grid-template-columns: repeat(2, 1fr); }
+
+  /* ---- Service detail ---- */
+  .included-list          { grid-template-columns: 1fr; }
+  .step-timeline          { grid-template-columns: repeat(2, 1fr); }
+  .step-timeline::before  { display: none; } /* hide connector on smaller grids */
+  .related-services__grid { grid-template-columns: 1fr; }
+
+  /* ---- Section titles ---- */
+  .section__title { font-size: var(--fs-2xl); }
+}
+
+
+/* ============================================================
+   MOBILE  (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+
+  .section    { padding-block: var(--space-xl); }
+  .container  { padding-inline: var(--space-sm); }
+
+  /* ---- Hero ---- */
+  .hero__title    { font-size: var(--fs-2xl); }
+  .hero__subtitle { font-size: var(--fs-sm); }
+  .hero__cta      { flex-direction: column; }
+
+  /* ---- Buttons ---- */
+  .btn { width: 100%; justify-content: center; }
+
+  /* ---- Page hero ---- */
+  .page-hero__title { font-size: var(--fs-xl); }
+
+  /* ---- Services grid ---- */
+  .services__grid { grid-template-columns: 1fr; }
+
+  /* ---- Why Us ---- */
+  .why-us__grid { grid-template-columns: 1fr; }
+
+  /* ---- About page ---- */
+  .values-grid { grid-template-columns: 1fr; }
+  .team-grid   { grid-template-columns: 1fr; }
+
+  /* ---- Service detail ---- */
+  .step-timeline { grid-template-columns: 1fr; }
+
+  /* ---- Contact ---- */
+  .contact__cards { max-width: 100%; }
+  .cta-banner__actions { flex-direction: column; align-items: center; }
+
+  /* ---- Section titles ---- */
+  .section__title    { font-size: var(--fs-xl); }
+  .section__subtitle { font-size: var(--fs-base); }
+
+  .footer__tagline { max-width: 280px; }
+
+  /* Contact form: stack two-column rows */
+  .form-row { grid-template-columns: 1fr; }
+
+  .form-submit { flex-direction: column; align-items: stretch; }
+}

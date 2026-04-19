@@ -5,10 +5,37 @@
 const siteConfig = {
 
   /* ---- Contact & social ---- */
-  whatsapp:  '50662889402',
-  linkedin:  'https://www.linkedin.com/in/nimore/',
-  instagram: 'https://www.linkedin.com/in/nimore/',
-  facebook:  'https://www.linkedin.com/in/nimore/',
+  whatsapp:     '50662889402',          // raw digits — used to build wa.me URLs
+  phoneDisplay: '+506 6288-9402',       // formatted number shown as text on contact page
+  emailAddress: 'contact@heyreg.net',   // shown as text + used for mailto: links
+  linkedin:     'https://www.linkedin.com/in/nimore/',
+  instagram:    'https://www.linkedin.com/in/nimore/',
+  facebook:     'https://www.linkedin.com/in/nimore/',
+
+  /* ---- Images -------------------------------------------------------
+     Set src to a relative path (e.g. 'img/team.jpg') or leave ''
+     to keep the default gradient placeholder.
+     ----------------------------------------------------------------- */
+  images: {
+    homeAbout:  '',   // Home page — right column of "About Us" preview section
+    aboutStory: '',   // About page — right column of "Our Story" section
+  },
+
+  /* ---- Team members -------------------------------------------------
+     name  : displayed on the team card (not translated — proper names)
+     photo : path to portrait photo, e.g. 'img/nicole.jpg' ('' = placeholder)
+     role  : translations.js handles the bilingual role label
+     ----------------------------------------------------------------- */
+  team: [
+    {
+      name:  'Nicole Moya',
+      photo: '',   // e.g. 'img/nicole.jpg'
+    },
+    {
+      name:  'Wei Zheng',
+      photo: '',   // e.g. 'img/wei.jpg'
+    },
+  ],
 
   /* ---- Color palette ---- */
   /*
@@ -21,6 +48,11 @@ const siteConfig = {
     secondaryLight:  '#FEF3C7',   // tinted backgrounds
     background:      '#FFFFFF',   // page background
     text:            '#1E1B4B',   // body text
+
+    whatsapp:        '#25d366',   // WhatsApp button
+    whatsappDark:    '#1ebe5c',   // WhatsApp button hover
+    email:           '#6b7280',   // Email button
+    emailDark:       '#4b5563',   // Email button hover
   },
 */
 
@@ -34,6 +66,11 @@ const siteConfig = {
     secondaryLight:  '#CCFAF4',   // tinted backgrounds
     background:      '#FFFFFF',   // page background
     text:            '#0A0A0A',   // body text
+
+    whatsapp:        '#25d366',   // WhatsApp button
+    whatsappDark:    '#1ebe5c',   // WhatsApp button hover
+    email:           '#6b7280',   // Email button
+    emailDark:       '#4b5563',   // Email button hover
   },
   */
 
@@ -48,6 +85,11 @@ const siteConfig = {
     secondaryLight:  '#1F2937',   // tinted backgrounds
     background:      '#F9FAFB',   // page background
     text:            '#111827',   // body text
+
+    whatsapp:        '#25d366',   // WhatsApp button
+    whatsappDark:    '#1ebe5c',   // WhatsApp button hover
+    email:           '#6b7280',   // Email button
+    emailDark:       '#4b5563',   // Email button hover
   },
   */
 
@@ -60,6 +102,11 @@ const siteConfig = {
     secondaryLight:  '#D5F5E3',   // tinted backgrounds
     background:      '#FFFFFF',   // page background
     text:            '#0D2137',   // body text
+
+    whatsapp:        '#25d366',   // WhatsApp button
+    whatsappDark:    '#1ebe5c',   // WhatsApp button hover
+    email:           '#6b7280',   // Email button
+    emailDark:       '#4b5563',   // Email button hover
   },
   
 

@@ -17,11 +17,12 @@
   /* ============================================================
      DOM references
      ============================================================ */
-  const navbar    = document.getElementById('navbar');
-  const hamburger = document.getElementById('hamburger');
-  const navMenu   = document.getElementById('nav-menu');
-  const langBtnEs = document.getElementById('lang-es');
-  const langBtnEn = document.getElementById('lang-en');
+  const navbar      = document.getElementById('navbar');
+  const hamburger   = document.getElementById('hamburger');
+  const navMenu     = document.getElementById('nav-menu');
+  const langBtnEs   = document.getElementById('lang-es');
+  const langBtnEn   = document.getElementById('lang-en');
+  const themeToggle = document.getElementById('theme-toggle');
 
   /* ============================================================
      1. NAVBAR — solid background on scroll
@@ -72,13 +73,57 @@
       if (c.secondaryLight) r.style.setProperty('--color-teal-light',  c.secondaryLight);
       if (c.background)     r.style.setProperty('--color-white',       c.background);
       if (c.text)           r.style.setProperty('--color-text',        c.text);
+      if (c.whatsapp)       r.style.setProperty('--color-whatsapp',    c.whatsapp);
+      if (c.whatsappDark)   r.style.setProperty('--color-whatsapp-dark', c.whatsappDark);
+      if (c.email)          r.style.setProperty('--color-email',       c.email);
+      if (c.emailDark)      r.style.setProperty('--color-email-dark',  c.emailDark);
     }
 
     /* Apply contact/social links */
     document.querySelectorAll('[data-config]').forEach(el => {
       const key = el.getAttribute('data-config');
       if (key === 'whatsapp') el.href = 'https://wa.me/' + siteConfig.whatsapp;
+      else if (key === 'email' && siteConfig.emailAddress) el.href = 'mailto:' + siteConfig.emailAddress;
       else if (siteConfig[key]) el.href = siteConfig[key];
+    });
+
+    /* Apply plain text values (phone, email address display) */
+    document.querySelectorAll('[data-config-text]').forEach(el => {
+      const key = el.getAttribute('data-config-text');
+      if (key === 'email' && siteConfig.emailAddress) el.textContent = siteConfig.emailAddress;
+      else if (key === 'phone' && siteConfig.phoneDisplay) el.textContent = siteConfig.phoneDisplay;
+    });
+
+    /* Apply images — sets background-image on placeholder divs, or src on <img> */
+    Object.entries(siteConfig.images || {}).forEach(([key, src]) => {
+      if (!src) return;
+      document.querySelectorAll(`[data-config-img="${key}"]`).forEach(el => {
+        if (el.tagName === 'IMG') {
+          el.src = src;
+        } else {
+          el.style.backgroundImage = `url('${src}')`;
+          el.style.backgroundSize  = 'cover';
+          el.style.backgroundPosition = 'center';
+        }
+      });
+    });
+
+    /* Apply team member name and photo */
+    (siteConfig.team || []).forEach((member, i) => {
+      const card = document.querySelector(`[data-config-member="${i}"]`);
+      if (!card) return;
+      if (member.name) {
+        const nameEl = card.querySelector('.team-card__name');
+        if (nameEl) nameEl.textContent = member.name;
+      }
+      if (member.photo) {
+        const photoEl = card.querySelector('.team-card__photo');
+        if (photoEl) {
+          photoEl.style.backgroundImage  = `url('${member.photo}')`;
+          photoEl.style.backgroundSize   = 'cover';
+          photoEl.style.backgroundPosition = 'center';
+        }
+      }
     });
   })();
 
@@ -234,6 +279,30 @@
     let lang = 'es';
     try { lang = localStorage.getItem('heyreg_lang') || 'es'; } catch (_) {}
     applyLanguage(lang);
+  })();
+
+
+  /* ============================================================
+     7. DARK MODE TOGGLE
+        Persists choice via localStorage.
+     ============================================================ */
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    try { localStorage.setItem('heyreg_theme', theme); } catch (_) {}
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      applyTheme(isDark ? 'light' : 'dark');
+    });
+  }
+
+  /* Restore saved theme before first paint */
+  (function initTheme() {
+    let theme = 'light';
+    try { theme = localStorage.getItem('heyreg_theme') || 'light'; } catch (_) {}
+    if (theme === 'dark') applyTheme('dark');
   })();
 
 })();

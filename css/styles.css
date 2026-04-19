@@ -19,6 +19,8 @@
   --color-teal-light:   #FEF3C7;
   --color-whatsapp:     #25d366;
   --color-whatsapp-dark:#1ebe5c;
+  --color-email:        #6b7280;
+  --color-email-dark:   #4b5563;
   --color-text:         #1E1B4B;
 
   --font-body:    'Inter', system-ui, sans-serif;
@@ -422,6 +424,16 @@ button { font-family: var(--font-body); }
 .btn--whatsapp:hover {
   background-color: var(--color-whatsapp-dark);
   box-shadow: 0 6px 20px rgba(37,211,102,0.35);
+}
+
+.btn--email {
+  background-color: var(--color-email);
+  color: #ffffff;
+  border-color: var(--color-email);
+}
+.btn--email:hover {
+  background-color: var(--color-email-dark);
+  box-shadow: 0 6px 20px rgba(107,114,128,0.35);
 }
 
 .btn--primary {
@@ -1135,4 +1147,97 @@ button { font-family: var(--font-body); }
   background-color: var(--color-teal);
   color: var(--color-white);
   transform: translateY(-3px);
+}
+
+/* ============================================================
+   THEME TOGGLE BUTTON
+   ============================================================ */
+.navbar__theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.375rem;
+  border-radius: var(--radius-sm);
+  color: rgba(255,255,255,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition);
+  flex-shrink: 0;
+}
+.navbar__theme-toggle:hover           { color: var(--color-teal); }
+.navbar.scrolled .navbar__theme-toggle { color: var(--color-navy); }
+
+/* Moon shown in light mode, sun shown in dark mode */
+.theme-icon--sun  { display: none; }
+.theme-icon--moon { display: block; }
+
+/* ============================================================
+   DARK MODE
+   ============================================================ */
+[data-theme="dark"] {
+  --color-gray-light: #1e2235;
+  --color-gray-mid:   #2d3452;
+  --color-gray-text:  #94a3b8;
+  --color-text:       #cbd5e1;
+}
+
+[data-theme="dark"] body {
+  background-color: #131626;
+}
+
+/* Scrolled / solid navbar */
+[data-theme="dark"] .navbar.scrolled {
+  background-color: #1a1f36;
+}
+[data-theme="dark"] .navbar.scrolled .navbar__logo,
+[data-theme="dark"] .navbar.scrolled .navbar__link,
+[data-theme="dark"] .navbar.scrolled .lang-btn,
+[data-theme="dark"] .navbar.scrolled .navbar__theme-toggle { color: #e2e8f0; }
+[data-theme="dark"] .navbar.scrolled .lang-divider          { color: rgba(226,232,240,0.3); }
+[data-theme="dark"] .navbar.scrolled .hamburger-line        { background-color: #e2e8f0; }
+
+/* Sun / moon swap in dark mode */
+[data-theme="dark"] .theme-icon--sun  { display: block; }
+[data-theme="dark"] .theme-icon--moon { display: none; }
+
+/* Desktop submenu */
+[data-theme="dark"] .submenu               { background-color: #1e2442; }
+[data-theme="dark"] .submenu a             { color: #cbd5e1; }
+[data-theme="dark"] .submenu a:hover       { background-color: #252a3d; color: var(--color-teal); }
+
+/* Section gray background */
+[data-theme="dark"] .section--gray { background-color: #1a1f36; }
+
+/* Cards */
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .contact-card,
+[data-theme="dark"] .mv-card,
+[data-theme="dark"] .value-card {
+  background-color: #1e2442;
+  border-color: #2d3452;
+}
+
+/* Form inputs */
+[data-theme="dark"] .form-input,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] .form-textarea {
+  background-color: #1e2442;
+  border-color: #2d3452;
+  color: #e2e8f0;
+}
+[data-theme="dark"] .form-input::placeholder,
+[data-theme="dark"] .form-textarea::placeholder { color: #4a5568; }
+
+/* Mobile navbar — dark mode overrides */
+@media (max-width: 768px) {
+  [data-theme="dark"] .navbar        { background-color: #1a1f36; }
+  [data-theme="dark"] .navbar__menu  { background-color: #1a1f36; }
+  [data-theme="dark"] .navbar__logo  { color: #e2e8f0; }
+  [data-theme="dark"] .navbar__link  { color: #e2e8f0; }
+  [data-theme="dark"] .lang-btn      { color: #e2e8f0; }
+  [data-theme="dark"] .lang-divider  { color: rgba(226,232,240,0.3); }
+  [data-theme="dark"] .hamburger-line { background-color: #e2e8f0; }
+  [data-theme="dark"] .navbar__theme-toggle { color: #e2e8f0; }
+  [data-theme="dark"] .submenu a     { color: #94a3b8; }
 }

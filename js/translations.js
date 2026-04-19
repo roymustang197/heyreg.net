@@ -125,6 +125,7 @@ const translations = {
     about_story_p3: "Our approach combines deep regulatory knowledge with a genuine commitment to client success. We don't just advise — we work alongside you, every step of the way.",
 
     about_mv_label:       "Our Direction",
+    about_mv_title:       "Mission & Vision",
     about_mission_title:  "Mission",
     about_mission_text:   "To facilitate our clients' regulatory compliance with precise, agile, and high-impact solutions that protect their operations and unlock growth.",
     about_vision_title:   "Vision",
@@ -144,9 +145,7 @@ const translations = {
     about_team_label:    "Our People",
     about_team_title:    "Meet the Team",
     about_team_subtitle: "Experienced professionals dedicated to your regulatory success.",
-    about_member1_name:  "Nicole Moya",
     about_member1_role:  "Founding Partner",
-    about_member2_name:  "Wei Zheng",
     about_member2_role:  "Founding Partner",
 
     /* ==========================================================
@@ -364,12 +363,11 @@ const translations = {
     contact_options_subtitle: "Choose your preferred way to reach us.",
 
     contact_wa_title:  "WhatsApp",
-    contact_wa_number: "+506 6288-9402",
     contact_wa_desc:   "Fast response during office hours. Ideal for initial inquiries and follow-ups.",
     contact_wa_btn:    "Chat on WhatsApp",
 
     contact_email_title:   "Email",
-    contact_email_address: "contact@heyreg.net",
+    /* contact_email_address moved to config.js → emailAddress */
     contact_email_desc:    "Send us a detailed message and we will reply within 24 business hours.",
     contact_email_btn:     "Send Email",
 
@@ -495,6 +493,7 @@ const translations = {
     about_story_p3: "Nuestro enfoque combina un profundo conocimiento regulatorio con un compromiso genuino con el éxito del cliente. No solo asesoramos — trabajamos a su lado, en cada etapa del camino.",
 
     about_mv_label:       "Nuestra Dirección",
+    about_mv_title:       "Misión & Visión",
     about_mission_title:  "Misión",
     about_mission_text:   "Facilitar el cumplimiento regulatorio de nuestros clientes con soluciones precisas, ágiles y de alto impacto que protejan sus operaciones y abran nuevas oportunidades de crecimiento.",
     about_vision_title:   "Visión",
@@ -514,9 +513,7 @@ const translations = {
     about_team_label:    "Nuestro Equipo",
     about_team_title:    "Conozca al Equipo",
     about_team_subtitle: "Profesionales experimentados dedicados a su éxito regulatorio.",
-    about_member1_name:  "Nicole Moya",
     about_member1_role:  "Cofundadora",
-    about_member2_name:  "Wei Zheng",
     about_member2_role:  "Cofundador",
 
 
@@ -732,12 +729,12 @@ const translations = {
     contact_options_subtitle: "Elija su forma preferida de contactarnos.",
 
     contact_wa_title:  "WhatsApp",
-    contact_wa_number: "+506 6288-9402",
+    /* contact_wa_number moved to config.js → phoneDisplay */
     contact_wa_desc:   "Respuesta rápida en horario de oficina. Ideal para consultas iniciales y seguimiento.",
     contact_wa_btn:    "Escribir por WhatsApp",
 
     contact_email_title:   "Correo Electrónico",
-    contact_email_address: "contact@heyreg.net",
+    /* contact_email_address moved to config.js → emailAddress */
     contact_email_desc:    "Envíenos un mensaje detallado y le responderemos en un máximo de 24 horas hábiles.",
     contact_email_btn:     "Enviar Correo",
 

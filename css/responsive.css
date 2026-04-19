@@ -44,10 +44,11 @@
 
   /* Mobile navbar always appears solid */
   .navbar { background-color: var(--color-white); box-shadow: var(--shadow-sm); }
-  .navbar__logo  { color: var(--color-navy); }
-  .lang-btn      { color: var(--color-navy); }
-  .lang-divider  { color: rgba(26,46,90,0.3); }
-  .hamburger-line { background-color: var(--color-navy); }
+  .navbar__logo          { color: var(--color-navy); }
+  .lang-btn              { color: var(--color-navy); }
+  .lang-divider          { color: rgba(26,46,90,0.3); }
+  .hamburger-line        { background-color: var(--color-navy); }
+  .navbar__theme-toggle  { color: var(--color-navy); }
 
   /* Submenu on mobile: static position, indented */
   .submenu {

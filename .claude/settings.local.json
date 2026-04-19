@@ -3,7 +3,10 @@
     "allow": [
       "Bash(mkdir -p \"c:/Users/Wei \\(PC\\)/heyreg.net/regulatory-consulting/css\" \"c:/Users/Wei \\(PC\\)/heyreg.net/regulatory-consulting/js\" \"c:/Users/Wei \\(PC\\)/heyreg.net/regulatory-consulting/assets/images\")",
       "Bash(touch \"c:/Users/Wei \\(PC\\)/heyreg.net/regulatory-consulting/assets/images/.gitkeep\")",
-      "Bash(python3 -)"
+      "Bash(python3 -)",
+      "Bash(mv regulatory-consulting/* .)",
+      "Bash(mv regulatory-consulting/.* .)",
+      "Bash(rmdir regulatory-consulting *)"
     ]
   }
 }

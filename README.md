@@ -1,23 +1,26 @@
 # HeyReg — Regulatory Consulting Website
 
-A fully static, bilingual (Spanish / English) multi-page regulatory consulting website. Built with HTML5, CSS3, and Vanilla JavaScript. No build step, no frameworks, no dependencies beyond Google Fonts.
+A fully static, bilingual (Spanish / English) multi-page regulatory consulting website. Built with HTML5, CSS3, and Vanilla JavaScript. Deployed on GitHub Pages with a custom domain at **heyreg.net**.
 
 ---
 
 ## Project Overview
 
-This is the public-facing website for a regulatory consulting firm serving businesses in highly regulated industries. The site defaults to Spanish (`es`) and supports instant language switching to English (`en`) without a page reload. Language preference is saved in `localStorage` and persists across all pages. The site works by simply opening any `.html` file in a browser or using VS Code Live Server.
+Public-facing website for a regulatory consulting firm serving businesses in highly regulated industries. The site defaults to Spanish (`es`) and supports instant language switching to English (`en`) without a page reload. Language preference and dark/light theme are saved in `localStorage` and persist across all pages.
+
+The site uses **Jekyll** (active on GitHub Pages) with `permalink` front matter to serve clean URLs — no `.html` extension visible in the browser.
 
 ---
 
 ## Architecture
 
 ```
-regulatory-consulting/
+heyreg.net/
 │
 ├── index.html                        Home — landing page with summary of all sections
 ├── about.html                        About Us — full story, mission, vision, values, team
 ├── contact.html                      Contact — WhatsApp/email cards + office info + map
+├── contact-form.html                 Contact Form — full inquiry form
 │
 ├── services/
 │   ├── index.html                    Services overview — all 4 services with full descriptions
@@ -27,17 +30,19 @@ regulatory-consulting/
 │   └── risk-assessment.html          Detail: Risk Assessment
 │
 ├── css/
-│   ├── styles.css                    Global styles — design tokens, all components, layout
-│   └── responsive.css                Breakpoints for tablet (≤768px) and mobile (≤480px)
+│   ├── styles.css                    Global styles — design tokens, all components, layout, dark mode
+│   └── responsive.css                Breakpoints: medium (769–1023px), tablet (≤768px), mobile (≤480px)
 │
 ├── js/
-│   ├── main.js                       Shared logic — navbar, hamburger, active page, language
+│   ├── config.js                     Site-wide config — brand, colors, contact info, images, team
+│   ├── main.js                       Shared logic — navbar, config injection, dark mode, language
 │   └── translations.js               All user-facing text in EN and ES, organized by page
 │
 ├── assets/
 │   └── images/
 │       └── .gitkeep                  Keeps the images/ folder tracked by git when empty
 │
+├── _config.yml                       Jekyll config — disables Liquid processing in HTML files
 └── README.md                         This file
 ```
 
@@ -48,28 +53,54 @@ regulatory-consulting/
 | Layer      | Technology                                                          |
 |------------|---------------------------------------------------------------------|
 | Markup     | HTML5 — semantic elements (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`) |
-| Styles     | CSS3 — Custom Properties, Grid, Flexbox, `@media` queries           |
+| Styles     | CSS3 — Custom Properties, Grid, Flexbox, `@media` queries, dark mode via `[data-theme="dark"]` |
 | Behaviour  | Vanilla JavaScript (ES6+, IIFE pattern — no frameworks)             |
 | Fonts      | Google Fonts — Inter (body), Playfair Display (headings)            |
 | Icons      | Inline SVG — zero external icon libraries                           |
+| Hosting    | GitHub Pages + Jekyll (for clean URL permalinks)                    |
+
+---
+
+## Customization via `js/config.js`
+
+All key site values are centralized in `config.js`. Edit this file to update:
+
+| Field | Purpose |
+|-------|---------|
+| `brand.name` / `brand.text1` / `brand.text2` | Navbar + footer text logo |
+| `brand.logo` | Path to logo image (replaces text logo when set) |
+| `brand.favicon` | Path to favicon image |
+| `whatsapp` | WhatsApp number (digits only, used in `wa.me` links) |
+| `phoneDisplay` | Human-readable phone number shown in UI |
+| `emailAddress` | Contact email (used in `mailto:` links) |
+| `linkedin` / `instagram` / `facebook` | Social media URLs |
+| `images.homeAbout` | Image in the Home page "About Us" preview section |
+| `images.aboutStory` | Image in the About page "Our Story" section |
+| `team[0].photo` / `team[1].photo` | Team member profile photos |
+| `colors` | Active color palette (CSS custom properties) |
 
 ---
 
 ## How to Run Locally
 
-### Option A — Open directly in a browser
+### Option A — VS Code Live Server (simplest, no clean URLs)
 
 1. Clone or download this repository.
-2. Navigate to the `regulatory-consulting/` folder.
-3. Double-click `index.html` — it opens in your default browser.
-4. All pages work the same way since all asset paths are relative.
+2. Open the folder in VS Code.
+3. Install the **Live Server** extension.
+4. Right-click `index.html` → **Open with Live Server**.
+5. Pages will have `.html` extensions locally — clean URLs only apply on GitHub Pages.
 
-### Option B — VS Code Live Server (recommended)
+### Option B — Jekyll (matches production exactly)
 
-1. Install the **Live Server** extension in VS Code.
-2. Open the `regulatory-consulting/` folder in VS Code.
-3. Right-click `index.html` → **Open with Live Server**.
-4. The browser auto-reloads on every file save.
+1. Install Ruby and Jekyll: https://jekyllrb.com/docs/installation/
+2. From the repo root, run:
+   ```bash
+   bundle exec jekyll serve
+   # or, if no Gemfile:
+   jekyll serve
+   ```
+3. Visit `http://localhost:4000` — clean URLs work exactly as on the live site.
 
 ---
 
@@ -77,12 +108,47 @@ regulatory-consulting/
 
 1. Push the repository to GitHub.
 2. Go to **Settings → Pages** in your GitHub repository.
-3. Under **Source**, select your branch (e.g. `main`) and set the folder to `/regulatory-consulting` (or `/` if files are at the repo root).
-4. Click **Save**. GitHub publishes the site at:
+3. Under **Source**, select your branch (e.g. `main`) and folder `/` (root).
+4. Click **Save**. GitHub builds with Jekyll and publishes at:
    ```
    https://<your-username>.github.io/<repo-name>/
    ```
-5. Wait ~60 seconds for the first build, then visit the URL.
+5. To use a custom domain, add a `CNAME` file at the repo root containing just your domain (e.g. `heyreg.net`).
+
+---
+
+## How to Add a New Service Page
+
+Follow these steps to add a fifth service (e.g. "Environmental Compliance"):
+
+**Step 1 — Create the HTML file**
+
+Copy `services/regulatory-compliance.html` to `services/environmental-compliance.html`. Change:
+- The Jekyll front matter: `permalink: /services/environmental-compliance`
+- `<body data-page="ec" ...>` — pick a unique two-letter key
+- All `data-i18n` attributes to use a new prefix (e.g. `ec_*`)
+- The breadcrumb and page title
+- The related services cards (link to the other 4 services)
+
+**Step 2 — Add the navbar submenu entry (all pages)**
+
+In every HTML file, add a new `<li>` inside the `.submenu` of the Services nav item:
+```html
+<li><a href="/services/environmental-compliance" data-nav="ec" data-i18n="nav_service_environmental">Environmental Compliance</a></li>
+```
+
+**Step 3 — Add translations**
+
+In `translations.js`, add the new key in both `en` and `es` blocks:
+- Navbar: `nav_service_environmental`
+- All page-specific keys with the `ec_` prefix (overview, included items, process steps, etc.)
+
+**Step 4 — Link from other pages**
+
+Add a card linking to the new service on:
+- `index.html` (Services Preview section)
+- `services/index.html` (Services Overview grid)
+- The Related Services section of the other 4 service detail pages
 
 ---
 
@@ -107,105 +173,28 @@ regulatory-consulting/
 
 ---
 
-## How to Add a New Service Page
+## Dark Mode
 
-Follow these steps to add a fifth service (e.g. "Environmental Compliance"):
+Dark mode is implemented in pure CSS via the `[data-theme="dark"]` attribute on `<html>`. A moon/sun toggle button in the navbar switches themes. The preference is saved to `localStorage` key `heyreg_theme` and restored on every page load.
 
-**Step 1 — Create the HTML file**
-
-Copy `services/regulatory-compliance.html` to `services/environmental-compliance.html`. Change:
-- `<body data-page="ec" ...>` — pick a unique two-letter key
-- All `data-i18n` attributes to use a new prefix (e.g. `ec_*`)
-- The breadcrumb and page title
-- The related services cards (link to the other 4 services)
-
-**Step 2 — Add the navbar submenu entry (all pages)**
-
-In every HTML file, add a new `<li>` inside the `.submenu` of the Services nav item:
-```html
-<!-- Root-level pages (index.html, about.html, contact.html) -->
-<li><a href="services/environmental-compliance.html" data-nav="ec" data-i18n="nav_service_environmental">Environmental Compliance</a></li>
-
-<!-- services/ pages -->
-<li><a href="environmental-compliance.html" data-nav="ec" data-i18n="nav_service_environmental">Environmental Compliance</a></li>
-```
-
-**Step 3 — Add translations**
-
-In `translations.js`, add the new key in both `en` and `es` blocks:
-- Navbar: `nav_service_environmental`
-- All page-specific keys with the `ec_` prefix (overview, included items, process steps, etc.)
-
-**Step 4 — Link from other pages**
-
-Add a card linking to the new service on:
-- `index.html` (Services Preview section)
-- `services/index.html` (Services Overview grid)
-- The Related Services section of the other 4 service detail pages
+No JavaScript frameworks or CSS libraries are used.
 
 ---
 
-## How to Add a New Module (e.g. IT Services)
+## Checklist Before Going Live
 
-To add an entirely new top-level section (e.g. IT services with its own overview + detail pages):
+Most values are now set in `js/config.js`. Items still needing attention:
 
-**Step 1 — Create the folder and files**
-```
-regulatory-consulting/
-└── it-services/
-    ├── index.html                 IT Services overview
-    ├── cybersecurity.html         IT detail page
-    └── cloud-compliance.html      IT detail page
-```
-
-**Step 2 — Use the correct relative paths**
-
-Files inside `it-services/` are at the same depth as `services/`. Use the same `../` prefix pattern:
-- CSS: `href="../css/styles.css"`
-- JS: `src="../js/translations.js"`, `src="../js/main.js"`
-- Nav links: `href="../index.html"`, `href="../about.html"`, etc.
-
-**Step 3 — Add a new navbar item**
-
-In every HTML file, add an `<li>` to `.navbar__list`:
-```html
-<li class="navbar__item navbar__item--has-submenu">
-  <!-- Root-level pages -->
-  <a href="it-services/index.html" class="navbar__link" data-nav="it" data-i18n="nav_it">IT Services</a>
-  <ul class="submenu" aria-label="IT Services submenu">
-    <li><a href="it-services/cybersecurity.html" data-nav="cyber" data-i18n="nav_it_cyber">Cybersecurity</a></li>
-  </ul>
-</li>
-```
-
-**Step 4 — Add `data-page` keys**
-
-Set `data-page="it"` on `it-services/index.html` body and `data-page="cyber"` on detail pages. In `main.js`, add `"it"` and its children to the `serviceDetailPages` array if they should highlight the IT nav link.
-
-**Step 5 — Add translations**
-
-Add all new keys to both `en` and `es` blocks in `translations.js`.
-
----
-
-## Customization Checklist
-
-Replace all placeholder values before going live:
-
-- [ ] **Company name** — search `HeyReg` across all HTML files and `translations.js`
-- [ ] **WhatsApp number** — replace `50662889402` in all `href="https://wa.me/50662889402"` links
-- [ ] **Email address** — replace `contact@heyreg.net` in all `href="mailto:..."` links and translation values
-- [ ] **Logo** — replace the text logo in `.navbar__logo` with `<img src="../assets/images/logo.svg" alt="Company Name" />`
-- [ ] **Placeholder images** — replace every `.image-placeholder` `<div>` and `.team-card__photo` `<div>` with real `<img>` elements
-- [ ] **Map** — replace the `.map-placeholder` `<div>` in `contact.html` with a Google Maps `<iframe>`
-- [ ] **Office address** — update `contact_office_address` and `contact_office_hours` in both language blocks of `translations.js`
-- [ ] **Phone number display** — update `contact_wa_number` in `translations.js`
-- [ ] **Color palette** — edit the `--color-*` custom properties in the `:root` block of `css/styles.css`
-- [ ] **Team names and roles** — update `about_member*` keys in `translations.js`
+- [ ] **Brand logo** — set `brand.logo` in `config.js` to an image path (e.g. `img/logo.svg`)
+- [ ] **Favicon** — set `brand.favicon` in `config.js` to an image path
+- [ ] **Team photos** — set `team[0].photo` and `team[1].photo` in `config.js`
+- [ ] **Section images** — set `images.homeAbout` and `images.aboutStory` in `config.js`
+- [ ] **Social links** — update `linkedin`, `instagram`, `facebook` in `config.js`
+- [ ] **Map** — replace the `.map-placeholder` `<div>` in `contact.html` with a real Google Maps `<iframe>`
+- [ ] **Office address** — update `contact_office_address` and `contact_office_hours` in `translations.js`
 - [ ] **Spanish copy** — review all `es` values in `translations.js` for accuracy
 - [ ] **English copy** — review all `en` values in `translations.js` for accuracy
 - [ ] **Meta descriptions** — update `<meta name="description">` in every HTML file
 - [ ] **Page titles** — update `<title>` in every HTML file
 - [ ] **Copyright year** — update `footer_copy` in `translations.js`
-- [ ] **Favicon** — add `<link rel="icon" href="../assets/images/favicon.ico">` to every `<head>`
 - [ ] **Analytics** — add your Google Analytics or Plausible snippet before `</body>` in every HTML file

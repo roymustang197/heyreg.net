@@ -1,0 +1,3 @@
+# Jekyll configuration for GitHub Pages
+# render_with_liquid prevents Jekyll from processing {{ }} syntax in HTML files
+render_with_liquid: false

@@ -6,7 +6,12 @@
       "Bash(python3 -)",
       "Bash(mv regulatory-consulting/* .)",
       "Bash(mv regulatory-consulting/.* .)",
-      "Bash(rmdir regulatory-consulting *)"
+      "Bash(rmdir regulatory-consulting *)",
+      "Bash(sed -i 's|href=\"index\\\\.html\"|href=\"/\"|g' index.html about.html contact.html contact-form.html)",
+      "Bash(sed -i 's|href=\"\\\\.\\\\./index\\\\.html\"|href=\"/\"|g' services/index.html services/regulatory-compliance.html services/permits-and-licenses.html services/government-relations.html services/risk-assessment.html)",
+      "Bash(sed -i 's|href=\"index\\\\.html\"|href=\"/services\"|g' services/index.html services/regulatory-compliance.html services/permits-and-licenses.html services/government-relations.html services/risk-assessment.html)",
+      "Bash(sed -i 's|href=\"regulatory-compliance\\\\.html\"|href=\"/services/regulatory-compliance\"|g' services/index.html services/regulatory-compliance.html services/permits-and-licenses.html services/government-relations.html services/risk-assessment.html)",
+      "Bash(sed -i 's|href=\"permits-and-licenses\\\\.html\"|href=\"/services/permits-and-licenses\"|g' services/index.html services/regulatory-compliance.html services/permits-and-licenses.html services/government-relations.html services/risk-assessment.html)"
     ]
   }
 }

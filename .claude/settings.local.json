@@ -11,7 +11,8 @@
       "Bash(sed -i 's|href=\"\\\\.\\\\./index\\\\.html\"|href=\"/\"|g' services/index.html services/regulatory-compliance.html services/permits-and-licenses.html services/government-relations.html services/risk-assessment.html)",
       "Bash(sed -i 's|href=\"index\\\\.html\"|href=\"/services\"|g' services/index.html services/regulatory-compliance.html services/permits-and-licenses.html services/government-relations.html services/risk-assessment.html)",
       "Bash(sed -i 's|href=\"regulatory-compliance\\\\.html\"|href=\"/services/regulatory-compliance\"|g' services/index.html services/regulatory-compliance.html services/permits-and-licenses.html services/government-relations.html services/risk-assessment.html)",
-      "Bash(sed -i 's|href=\"permits-and-licenses\\\\.html\"|href=\"/services/permits-and-licenses\"|g' services/index.html services/regulatory-compliance.html services/permits-and-licenses.html services/government-relations.html services/risk-assessment.html)"
+      "Bash(sed -i 's|href=\"permits-and-licenses\\\\.html\"|href=\"/services/permits-and-licenses\"|g' services/index.html services/regulatory-compliance.html services/permits-and-licenses.html services/government-relations.html services/risk-assessment.html)",
+      "Bash(grep -v 'front matter\\\\|_site\\\\|\\\\.git\\\\|README\\\\|node_modules\\\\|<!--\\\\|//.*\\\\.html\\\\|action=\\\\|lang\\\\|permalink')"
     ]
   }
 }

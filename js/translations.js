@@ -827,7 +827,7 @@ const translations = {
        HOME PAGE
        ========================================================== */
     home_hero_title:    "Consultoría en Asuntos Regulatorios para Productos de Salud, Bienestar y Tecnología Médica en Costa Rica ",
-    home_hero_subtitle: "Simplificamos el registro, cumplimiento normativo y automatización regulatoria para que puedas enfocarte en lo que importa, llevar tu producto al mercado costarricense. ",
+    home_hero_subtitle: "Simplificamos el registro, cumplimiento normativo y automatización regulatoria para que pueda enfocarse en lo que importa, llevar su producto al mercado costarricense. ",
     home_hero_cta_wa:    "WhatsApp",
     home_hero_cta_email: "Enviar Correo",
     home_hero_cta_svcs:  "Ver Nuestros Servicios",
@@ -871,7 +871,7 @@ const translations = {
 
     home_services_label:    "Nuestros Servicios",
     home_services_title:    "Lo Que Hacemos",
-    home_services_subtitle: "Soluciones regulatorias integrales que protegen y potencian tu negocio, desde la estrategia hasta la ejecución del registro sanitario en Costa Rica. Además, ofrecemos automatización de procesos regulatorios como un servicio independiente para impulsar la eficiencia de tus operaciones. Somos un equipo con ideas frescas y en constante actualización, comprometido con la innovación en el ámbito regulatorio.",
+    home_services_subtitle: "Soluciones regulatorias integrales que protegen y potencian su negocio, desde la estrategia hasta la ejecución del registro sanitario en Costa Rica. Además, ofrecemos automatización de procesos regulatorios como un servicio independiente para impulsar la eficiencia de sus operaciones. Somos un equipo con ideas frescas y en constante actualización, comprometido con la innovación en el ámbito regulatorio.",
 
     home_svc1_title: "Cumplimiento Regulatorio",
     home_svc1_desc:  "Evaluamos sus productos para asegurar su conformidad con el marco regulatorio costarricense y las normativas legales vigentes, minimizando riesgos y facilitando su acceso al mercado.",
@@ -919,7 +919,7 @@ const translations = {
     about_story_title: "Construidos sobre Experiencia y Confianza",
     about_story_p1: "HeyReg nació en 2026 de una necesidad real: empresas de medicamentos y dispositivos médicos en Latinoamérica enfrentando procesos regulatorios cada vez más complejos sin el acompañamiento adecuado.",
     about_story_p2: "Con más de {{exp}} años de experiencia en la industria, hemos construido una firma consultora que entiende el sector desde adentro — combinando conocimiento técnico y regulatorio con tecnología para hacer el proceso más simple, rápido y predecible.",
-    about_story_p3: "No solo asesoramos — trabajamos a tu lado en cada etapa del camino, desde el registro inicial hasta el mantenimiento de tus productos en el mercado.",
+    about_story_p3: "No solo asesoramos — trabajamos a su lado en cada etapa del camino, desde el registro inicial hasta el mantenimiento de sus productos en el mercado.",
 
     about_mv_label:       "Nuestra Dirección",
     about_mv_title:       "Misión & Visión",

@@ -571,7 +571,7 @@ const translations = {
     about_team_label:    "Nuestro Equipo",
     about_team_title:    "Conozca al Equipo",
     about_team_subtitle: "Profesionales experimentados dedicados a su éxito regulatorio.",
-    about_member1_role:  "Cofundador & Director de Tecnología y Desarrollo de Negociosa & Directora de Asuntos Regulatorios",
+    about_member1_role:  "Cofundadora & Directora de Asuntos Regulatorios",
     about_member2_role:  "Cofundador & Director de Tecnología y Desarrollo de Negocios",
 
 

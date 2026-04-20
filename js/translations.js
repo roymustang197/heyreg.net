@@ -147,8 +147,8 @@ const translations = {
     about_team_label:    "Our People",
     about_team_title:    "Meet the Team",
     about_team_subtitle: "Experienced professionals dedicated to your regulatory success.",
-    about_member1_role:  "Founding Partner",
-    about_member2_role:  "Founding Partner",
+    about_member1_role:  "Co-founder & Head of Regulatory Affairs",
+    about_member2_role:  "Co-founder & Head of Technology and Business Development",
 
     /* ==========================================================
        SERVICES OVERVIEW PAGE
@@ -571,8 +571,8 @@ const translations = {
     about_team_label:    "Nuestro Equipo",
     about_team_title:    "Conozca al Equipo",
     about_team_subtitle: "Profesionales experimentados dedicados a su éxito regulatorio.",
-    about_member1_role:  "Cofundadora",
-    about_member2_role:  "Cofundador",
+    about_member1_role:  "Cofundador & Director de Tecnología y Desarrollo de Negociosa & Directora de Asuntos Regulatorios",
+    about_member2_role:  "Cofundador & Director de Tecnología y Desarrollo de Negocios",
 
 
     /* ==========================================================

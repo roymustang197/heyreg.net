@@ -23,9 +23,9 @@ const siteConfig = {
   whatsapp:     '50662889402',          // raw digits — used to build wa.me URLs
   phoneDisplay: '+506 6288-9402',       // formatted number shown as text on contact page
   emailAddress: 'contact@heyreg.net',   // shown as text + used for mailto: links
-  linkedin:     'https://www.linkedin.com/in/nimore/',
-  instagram:    'https://www.linkedin.com/in/nimore/',
-  facebook:     'https://www.linkedin.com/in/nimore/',
+  linkedin:     'https://www.linkedin.com/company/heyreg/',
+  instagram:    'https://www.linkedin.com/company/heyreg/',
+  facebook:     'https://www.linkedin.com/company/heyreg/',
 
   /* ---- Images -------------------------------------------------------
      Set src to a relative path (e.g. 'img/team.jpg') or leave ''
@@ -37,18 +37,21 @@ const siteConfig = {
   },
 
   /* ---- Team members -------------------------------------------------
-     name  : displayed on the team card (not translated — proper names)
-     photo : path to portrait photo, e.g. 'img/nicole.jpg' ('' = placeholder)
-     role  : translations.js handles the bilingual role label
+     name    : displayed on the team card (not translated — proper names)
+     photo   : path to portrait photo, e.g. 'img/nicole.jpg' ('' = placeholder)
+     linkedin: full LinkedIn profile URL ('' = icon hidden)
+     role    : translations.js handles the bilingual role label
      ----------------------------------------------------------------- */
   team: [
     {
-      name:  'Nicole Moya',
-      photo: '',   // e.g. 'img/nicole.jpg'
+      name:     'Nicole Moya',
+      photo:    '',   // e.g. 'img/nicole.jpg'
+      linkedin: 'https://www.linkedin.com/in/nimore/',   // e.g. 'https://www.linkedin.com/in/nicole-moya/'
     },
     {
-      name:  'Wei Zheng',
-      photo: '',   // e.g. 'img/wei.jpg'
+      name:     'Wei Zheng',
+      photo:    '',   // e.g. 'img/wei.jpg'
+      linkedin: 'https://www.linkedin.com/in/wezhema/',   // e.g. 'https://www.linkedin.com/in/wei-zheng/'
     },
   ],
 

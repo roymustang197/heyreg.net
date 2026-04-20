@@ -139,7 +139,7 @@
       });
     });
 
-    /* Apply team member name and photo */
+    /* Apply team member name, photo, and LinkedIn link */
     (siteConfig.team || []).forEach((member, i) => {
       const card = document.querySelector(`[data-config-member="${i}"]`);
       if (!card) return;
@@ -153,6 +153,13 @@
           photoEl.style.backgroundImage  = `url('${member.photo}')`;
           photoEl.style.backgroundSize   = 'cover';
           photoEl.style.backgroundPosition = 'center';
+        }
+      }
+      if (member.linkedin) {
+        const liEl = card.querySelector('.team-card__linkedin');
+        if (liEl) {
+          liEl.href = member.linkedin;
+          liEl.removeAttribute('hidden');
         }
       }
     });

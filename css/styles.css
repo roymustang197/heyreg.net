@@ -901,6 +901,34 @@ button { font-family: var(--font-body); }
   font-weight: 500;
 }
 
+.team-card__linkedin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-gray-light);
+  color: var(--color-navy);
+  transition: background-color var(--transition), color var(--transition), transform var(--transition);
+}
+
+.team-card__linkedin:hover {
+  background-color: #0077b5;
+  color: var(--color-white);
+  transform: translateY(-2px);
+}
+
+[data-theme="dark"] .team-card__linkedin {
+  background-color: #2d3452;
+  color: #e2e8f0;
+}
+
+[data-theme="dark"] .team-card__linkedin:hover {
+  background-color: #0077b5;
+  color: var(--color-white);
+}
+
 /* ============================================================
    SERVICE DETAIL PAGES
    ============================================================ */

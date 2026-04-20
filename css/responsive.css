@@ -14,8 +14,7 @@
   .services__grid          { grid-template-columns: repeat(2, 1fr); }
   .why-us__grid            { grid-template-columns: repeat(2, 1fr); }
   .values-grid             { grid-template-columns: repeat(2, 1fr); }
-  .step-timeline           { grid-template-columns: repeat(2, 1fr); }
-  .step-timeline::before   { display: none; }
+  .step                    { flex: 0 0 calc((100% - var(--space-lg)) / 2); }
   .related-services__grid  { grid-template-columns: repeat(2, 1fr); }
 
   /* ---- Two-column prose+image layouts: stack vertically ---- */
@@ -125,9 +124,7 @@
   .values-grid   { grid-template-columns: repeat(2, 1fr); }
 
   /* ---- Service detail ---- */
-  .included-list          { grid-template-columns: 1fr; }
-  .step-timeline          { grid-template-columns: repeat(2, 1fr); }
-  .step-timeline::before  { display: none; } /* hide connector on smaller grids */
+  .step                   { flex: 0 0 calc((100% - var(--space-lg)) / 2); }
   .related-services__grid { grid-template-columns: 1fr; }
 
   /* ---- Section titles ---- */
@@ -165,7 +162,7 @@
   .team-grid   { grid-template-columns: 1fr; }
 
   /* ---- Service detail ---- */
-  .step-timeline { grid-template-columns: 1fr; }
+  .step { flex: 0 0 100%; }
 
   /* ---- Contact ---- */
   .contact__cards { max-width: 100%; }

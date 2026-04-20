@@ -17,6 +17,18 @@
   /* ============================================================
      DOM references
      ============================================================ */
+  /* Years of experience — increments on April 18 each year */
+  const yearsOfExperience = (function () {
+    const date = (typeof siteConfig !== 'undefined' && siteConfig.foundingDate)
+      ? new Date(siteConfig.foundingDate)
+      : new Date('2022-04-18');
+    const now  = new Date();
+    let yrs = now.getFullYear() - date.getFullYear();
+    const anniversary = new Date(now.getFullYear(), date.getMonth(), date.getDate());
+    if (now < anniversary) yrs--;
+    return Math.max(0, yrs);
+  }());
+
   const navbar      = document.getElementById('navbar');
   const hamburger   = document.getElementById('hamburger');
   const navMenu     = document.getElementById('nav-menu');
@@ -178,7 +190,7 @@
     if (!page) return;
 
     /* Which nav key should be highlighted? */
-    const serviceDetailPages = ['rc', 'pl', 'gr', 'ra'];
+    const serviceDetailPages = ['rc', 'hr', 'hrm', 'pq', 'ce', 'ros', 'rpa', 'st'];
     const activeKey = serviceDetailPages.includes(page) ? 'services' : page;
 
     /* Mark matching nav links */
@@ -289,8 +301,11 @@
     /* Update every element with a data-i18n attribute */
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key  = el.getAttribute('data-i18n');
-      const text = translations[lang][key];
-      if (text !== undefined) el.textContent = text;
+      let text = translations[lang][key];
+      if (text !== undefined) {
+        text = text.replace(/\{\{exp\}\}/g, yearsOfExperience);
+        el.textContent = text;
+      }
     });
 
     /* Sync the HTML lang attribute (accessibility + SEO) */

@@ -12,7 +12,10 @@
       "Bash(sed -i 's|href=\"index\\\\.html\"|href=\"/services\"|g' services/index.html services/regulatory-compliance.html services/permits-and-licenses.html services/government-relations.html services/risk-assessment.html)",
       "Bash(sed -i 's|href=\"regulatory-compliance\\\\.html\"|href=\"/services/regulatory-compliance\"|g' services/index.html services/regulatory-compliance.html services/permits-and-licenses.html services/government-relations.html services/risk-assessment.html)",
       "Bash(sed -i 's|href=\"permits-and-licenses\\\\.html\"|href=\"/services/permits-and-licenses\"|g' services/index.html services/regulatory-compliance.html services/permits-and-licenses.html services/government-relations.html services/risk-assessment.html)",
-      "Bash(grep -v 'front matter\\\\|_site\\\\|\\\\.git\\\\|README\\\\|node_modules\\\\|<!--\\\\|//.*\\\\.html\\\\|action=\\\\|lang\\\\|permalink')"
+      "Bash(grep -v 'front matter\\\\|_site\\\\|\\\\.git\\\\|README\\\\|node_modules\\\\|<!--\\\\|//.*\\\\.html\\\\|action=\\\\|lang\\\\|permalink')",
+      "Bash(node -e ' *)",
+      "Bash(sed -n '86,92p' services/regulatory-compliance.html)",
+      "Bash(sed -n '82,88p' services/health-registrations.html)"
     ]
   }
 }

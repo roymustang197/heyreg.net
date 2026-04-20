@@ -936,7 +936,7 @@ button { font-family: var(--font-body); }
 /* Included / deliverables checklist */
 .included-list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: var(--space-sm) var(--space-lg);
   list-style: none;
   margin-top: var(--space-sm);
@@ -967,6 +967,19 @@ button { font-family: var(--font-body); }
   background-position: center;
 }
 
+/* Two-column layout for service detail pages (included + deliverables, ideal + who) */
+.svc-detail-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl) var(--space-xl);
+}
+
+@media (max-width: 768px) {
+  .svc-detail-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* "Who is this for" section */
 .who-is-this__inner {
   max-width: 760px;
@@ -978,30 +991,18 @@ button { font-family: var(--font-body); }
   line-height: 1.75;
 }
 
-/* Process / step timeline — horizontal on desktop */
+/* Process / step timeline — flex rows of 4, last row centered */
 .step-timeline {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--space-lg);
-  position: relative;
-  margin-top: var(--space-sm);
-}
-
-/* Connecting line between step numbers */
-.step-timeline::before {
-  content: '';
-  position: absolute;
-  top: 27px;
-  left: calc(12.5% + 12px);
-  right: calc(12.5% + 12px);
-  height: 2px;
-  background-color: var(--color-gray-mid);
-  z-index: 0;
+  justify-content: center;
+  margin-top: var(--space-md);
 }
 
 .step {
-  position: relative;
-  z-index: 1;
+  flex: 0 0 calc((100% - 3 * var(--space-lg)) / 4);
+  min-width: 0;
   text-align: center;
 }
 
@@ -1378,6 +1379,23 @@ button { font-family: var(--font-body); }
 }
 [data-theme="dark"] .form-input::placeholder,
 [data-theme="dark"] .form-textarea::placeholder { color: #4a5568; }
+
+/* Section headings and labels */
+[data-theme="dark"] .section__label { color: var(--color-teal); }
+[data-theme="dark"] .section__title { color: #e2e8f0; }
+[data-theme="dark"] .section__subtitle { color: #cbd5e1; }
+
+/* Step timeline */
+[data-theme="dark"] .step__number { background-color: #4338ca; }
+[data-theme="dark"] .step__title { color: #e2e8f0; }
+[data-theme="dark"] .step__desc { color: #cbd5e1; }
+
+/* Included/related lists */
+[data-theme="dark"] .included-list { color: #cbd5e1; }
+[data-theme="dark"] .included-list li { color: #cbd5e1; }
+
+/* Page hero title */
+[data-theme="dark"] .page-hero__title { color: #e2e8f0; }
 
 /* Solid-navbar dark mode overrides (mobile ≤768px always has solid navbar) */
 @media (max-width: 768px) {

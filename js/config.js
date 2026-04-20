@@ -19,6 +19,12 @@ const siteConfig = {
     favicon: '',           // browser tab icon, e.g. 'img/favicon.png' or 'img/favicon.ico'
   },
 
+  /* ---- Founding date -----------------------------------------------
+     Used to calculate years of experience dynamically.
+     The counter increments every year on April 18.
+     ----------------------------------------------------------------- */
+  foundingDate: '2022-04-18',
+
   /* ---- Contact & social ---- */
   whatsapp:     '50662889402',          // raw digits — used to build wa.me URLs
   phoneDisplay: '+506 6288-9402',       // formatted number shown as text on contact page

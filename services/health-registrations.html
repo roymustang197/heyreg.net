@@ -1,0 +1,211 @@
+---
+permalink: /services/health-registrations
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HeyReg Inscripciones Sanitarias — gestión completa del registro sanitario ante el Ministerio de Salud de Costa Rica." />
+  <title>Inscripciones Sanitarias — HeyReg</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body data-page="hr" data-navbar="solid">
+
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container navbar__inner">
+      <a href="/" class="navbar__logo" aria-label="HeyReg — Home"><span class="logo-accent">Hey</span>Reg</a>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span>
+      </button>
+      <nav id="nav-menu" class="navbar__menu" aria-label="Main navigation">
+        <ul class="navbar__list">
+          <li class="navbar__item"><a href="/"       class="navbar__link" data-nav="home"    data-i18n="nav_home">Inicio</a></li>
+          <li class="navbar__item"><a href="/about"  class="navbar__link" data-nav="about"   data-i18n="nav_about">Quiénes Somos</a></li>
+          <li class="navbar__item navbar__item--has-submenu">
+            <a href="/services" class="navbar__link" data-nav="services" data-i18n="nav_services">Servicios</a>
+            <ul class="submenu" aria-label="Services submenu">
+              <li><a href="/services/regulatory-compliance"           data-nav="rc"  data-i18n="nav_service_regulatory">Cumplimiento Regulatorio</a></li>
+              <li><a href="/services/health-registrations"            data-nav="hr"  data-i18n="nav_service_hr">Inscripciones Sanitarias</a></li>
+              <li><a href="/services/health-record-maintenance"       data-nav="hrm" data-i18n="nav_service_hrm">Mantenimiento de Registros</a></li>
+              <li><a href="/services/pre-qualifications"              data-nav="pq"  data-i18n="nav_service_pq">Precalificaciones</a></li>
+              <li><a href="/services/official-first-batch-quality-control"                 data-nav="ce"  data-i18n="nav_service_ce">Control Estatal</a></li>
+              <li><a href="/services/regulatory-operational-services" data-nav="ros" data-i18n="nav_service_ros">Servicios Operativos</a></li>
+              <li><a href="/services/regulatory-process-automation"   data-nav="rpa" data-i18n="nav_service_rpa">Automatización Regulatoria</a></li>
+              <li><a href="/services/simple-translations"             data-nav="st"  data-i18n="nav_service_st">Traducciones Simples</a></li>
+            </ul>
+          </li>
+          <li class="navbar__item"><a href="/contact" class="navbar__link" data-nav="contact" data-i18n="nav_contact">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="navbar__lang" role="group" aria-label="Language selection">
+        <button class="lang-btn active" id="lang-es" aria-pressed="true">ES</button>
+        <span class="lang-divider" aria-hidden="true">|</span>
+        <button class="lang-btn" id="lang-en" aria-pressed="false">EN</button>
+      </div>
+      <button class="navbar__theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="theme-icon theme-icon--moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="theme-icon theme-icon--sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero" aria-label="Page header">
+      <div class="container page-hero__inner">
+        <h1 class="page-hero__title" data-i18n="hr_hero_title">Inscripciones Sanitarias</h1>
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="/" data-i18n="hr_breadcrumb_home">Inicio</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <a href="/services" data-i18n="hr_breadcrumb_services">Servicios</a>
+          <span class="breadcrumb__sep" aria-hidden="true">/</span>
+          <span class="breadcrumb__current" data-i18n="hr_breadcrumb_current">Inscripciones Sanitarias</span>
+        </nav>
+      </div>
+    </section>
+
+    <section class="section" id="overview" aria-labelledby="hr-overview-heading">
+      <div class="container">
+        <span class="section__label" data-i18n="hr_overview_label">Descripción del Servicio</span>
+        <h2 class="section__title" id="hr-overview-heading" data-i18n="hr_overview_title">Introduzca su Producto en el Mercado Gracias al Registro Sanitario.</h2>
+        <p style="color:var(--color-gray-text);" data-i18n="hr_overview_p1">Gestionamos el proceso completo de inscripción sanitaria de sus productos ante el Ministerio de Salud de Costa Rica.</p>
+      </div>
+    </section>
+
+    <section class="section section--gray" id="scope" aria-labelledby="hr-scope-heading">
+      <div class="container">
+        <span class="section__label" id="hr-scope-heading" data-i18n="hr_included_label">Alcance del Servicio</span>
+        <h2 class="section__title" data-i18n="hr_included_title">Qué Incluye</h2>
+        <ul class="included-list">
+          <li data-i18n="hr_inc1">Asesoría sobre requisitos regulatorios aplicables</li>
+          <li data-i18n="hr_inc2">Revisión y organización de documentación técnica</li>
+          <li data-i18n="hr_inc3">Preparación y armado del expediente de registro</li>
+          <li data-i18n="hr_inc4">Presentación del trámite ante el Ministerio de Salud</li>
+          <li data-i18n="hr_inc5">Seguimiento continuo del proceso</li>
+          <li data-i18n="hr_inc6">Atención y respuesta a prevenciones u observaciones</li>
+          <li data-i18n="hr_inc7">Acompañamiento hasta la obtención del registro sanitario</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="deliverables" aria-labelledby="hr-deliverables-heading">
+      <div class="container">
+        <span class="section__label" data-i18n="hr_deliverables_label">Entregables</span>
+        <h2 class="section__title" id="hr-deliverables-heading" data-i18n="hr_deliverables_title">Entregables del Servicio</h2>
+        <ul class="included-list">
+          <li data-i18n="hr_del1">Expediente de registro sanitario completo</li>
+          <li data-i18n="hr_del2">Comprobantes de presentación del trámite</li>
+          <li data-i18n="hr_del3">Respuestas a prevenciones (si aplican)</li>
+          <li data-i18n="hr_del4">Resolución sanitaria (registro aprobado)</li>
+          <li data-i18n="hr_del5">Asesoría sobre condiciones y obligaciones post-registro</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--gray" id="audience" aria-labelledby="hr-who-heading">
+      <div class="container">
+        <span class="section__label" data-i18n="hr_ideal_label">Ideal Para</span>
+        <h2 class="section__title" id="hr-who-heading" data-i18n="hr_who_title">¿Para Quién Es Este Servicio?</h2>
+        <ul class="included-list">
+          <li data-i18n="hr_ideal1">Empresas que desean registrar productos en Costa Rica</li>
+          <li data-i18n="hr_ideal2">Productos nuevos que requieren ingreso al mercado</li>
+          <li data-i18n="hr_ideal3">Empresas extranjeras sin presencia local</li>
+          <li data-i18n="hr_ideal4">Organizaciones que buscan externalizar el proceso regulatorio</li>
+          <li data-i18n="hr_who1">Laboratorios farmacéuticos</li>
+          <li data-i18n="hr_who2">Empresas de dispositivos médicos</li>
+          <li data-i18n="hr_who3">Compañías de productos naturales y suplementos</li>
+          <li data-i18n="hr_who4">Empresas biotecnológicas</li>
+          <li data-i18n="hr_who5">Distribuidores y droguerías</li>
+          <li data-i18n="hr_who6">Startups del sector salud</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="process" aria-labelledby="hr-process-heading">
+      <div class="container">
+        <span class="section__label" data-i18n="hr_how_label">Cómo Trabajamos</span>
+        <h2 class="section__title" id="hr-process-heading" data-i18n="hr_process_title">Nuestro Proceso</h2>
+        <p style="color:var(--color-gray-text);margin-bottom:var(--space-lg);" data-i18n="hr_how_text">Trabajamos como su aliado estratégico, gestionando el proceso de inscripción de forma integral.</p>
+        <div class="step-timeline" role="list">
+          <div class="step" role="listitem"><div class="step__number" aria-hidden="true">1</div><h3 class="step__title" data-i18n="hr_step1_title">Recolección de Información</h3><p class="step__desc" data-i18n="hr_step1_desc">Recibimos la documentación técnica y legal del producto.</p></div>
+          <div class="step" role="listitem"><div class="step__number" aria-hidden="true">2</div><h3 class="step__title" data-i18n="hr_step2_title">Validación Inicial</h3><p class="step__desc" data-i18n="hr_step2_desc">Verificamos que la información esté completa y conforme a los requisitos.</p></div>
+          <div class="step" role="listitem"><div class="step__number" aria-hidden="true">3</div><h3 class="step__title" data-i18n="hr_step3_title">Definición de Requisitos</h3><p class="step__desc" data-i18n="hr_step3_desc">Confirmamos la ruta regulatoria según el tipo de producto.</p></div>
+          <div class="step" role="listitem"><div class="step__number" aria-hidden="true">4</div><h3 class="step__title" data-i18n="hr_step4_title">Preparación del Expediente</h3><p class="step__desc" data-i18n="hr_step4_desc">Organizamos y estructuramos el dossier de registro.</p></div>
+          <div class="step" role="listitem"><div class="step__number" aria-hidden="true">5</div><h3 class="step__title" data-i18n="hr_step5_title">Presentación del Trámite</h3><p class="step__desc" data-i18n="hr_step5_desc">Ingresamos la solicitud ante el Ministerio de Salud.</p></div>
+          <div class="step" role="listitem"><div class="step__number" aria-hidden="true">6</div><h3 class="step__title" data-i18n="hr_step6_title">Seguimiento Activo</h3><p class="step__desc" data-i18n="hr_step6_desc">Monitoreamos el estado del trámite y gestionamos avances.</p></div>
+          <div class="step" role="listitem"><div class="step__number" aria-hidden="true">7</div><h3 class="step__title" data-i18n="hr_step7_title">Gestión de Prevenciones</h3><p class="step__desc" data-i18n="hr_step7_desc">Respondemos observaciones emitidas por la autoridad sanitaria.</p></div>
+          <div class="step" role="listitem"><div class="step__number" aria-hidden="true">8</div><h3 class="step__title" data-i18n="hr_step8_title">Obtención del Registro</h3><p class="step__desc" data-i18n="hr_step8_desc">Acompañamos hasta la aprobación final del producto.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--gray" id="related" aria-labelledby="hr-related-heading">
+      <div class="container">
+        <span class="section__label" data-i18n="hr_related_label">Servicios Relacionados</span>
+        <h2 class="section__title" id="hr-related-heading" data-i18n="hr_related_title">También Podría Necesitar</h2>
+        <div class="related-services__grid">
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="36" height="36"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg></div>
+            <h3 class="service-card__title" data-i18n="nav_service_hrm">Mantenimiento de Registros</h3>
+            <p class="service-card__desc" data-i18n="home_svc3_desc">Realizamos actualizaciones y renovaciones para mantener sus productos en cumplimiento continuo.</p>
+            <a href="/services/health-record-maintenance" class="service-card__link" data-i18n="btn_learn_more">Conocer Más →</a>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="36" height="36"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
+            <h3 class="service-card__title" data-i18n="nav_service_regulatory">Cumplimiento Regulatorio</h3>
+            <p class="service-card__desc" data-i18n="home_svc1_desc">Evaluamos sus productos para asegurar su conformidad con el marco regulatorio costarricense.</p>
+            <a href="/services/regulatory-compliance" class="service-card__link" data-i18n="btn_learn_more">Conocer Más →</a>
+          </article>
+          <article class="service-card">
+            <div class="service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="36" height="36"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+            <h3 class="service-card__title" data-i18n="nav_service_ros">Servicios Operativos Regulatorios</h3>
+            <p class="service-card__desc" data-i18n="home_svc6_desc">Ofrecemos representación legal y profesional responsable ante el Ministerio de Salud.</p>
+            <a href="/services/regulatory-operational-services" class="service-card__link" data-i18n="btn_learn_more">Conocer Más →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner" aria-label="Call to action">
+      <div class="container">
+        <h2 class="cta-banner__title" data-i18n="hr_cta_title">¿Listo para registrar su producto en Costa Rica?</h2>
+        <span class="cta-banner__subtitle" data-i18n="hr_cta_subtitle">Contáctenos hoy y le acompañamos en todo el proceso de inscripción.</span>
+        <div class="cta-banner__actions">
+          <a href="#" data-config="whatsapp" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp"><span data-i18n="btn_chat_whatsapp">Escribir por WhatsApp</span></a>
+          <a href="/contact" class="btn btn--outline" data-i18n="btn_contact_us">Contáctenos</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer__inner">
+      <p class="footer__brand"><span class="logo-accent">Hey</span>Reg</p>
+      <p class="footer__tagline" data-i18n="footer_tagline">Expertos en regulación. Aliados en su crecimiento.</p>
+      <div class="footer__social">
+        <a href="#" data-config="whatsapp" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        <a href="/contact-form" class="footer__social-link" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></a>
+        <a href="#" data-config="linkedin" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="#" data-config="instagram" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="#" data-config="facebook" class="footer__social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      </div>
+      <div class="footer__legal">
+        <a href="/privacy-policy" data-i18n="footer_privacy">Política de Privacidad</a>
+        <span aria-hidden="true">·</span>
+        <a href="/terms-and-conditions" data-i18n="footer_terms">Términos y Condiciones</a>
+      </div>
+      <p class="footer__copy" data-i18n="footer_copy">© 2026 HeyReg. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/translations.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

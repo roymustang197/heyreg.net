@@ -6,8 +6,8 @@ permalink: /services/regulatory-compliance
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HeyReg Regulatory Compliance — gap analysis, framework design, audit support, and ongoing monitoring." />
-  <title>Regulatory Compliance — HeyReg</title>
+  <meta name="description" content="HeyReg Cumplimiento Regulatorio — evaluación técnica, gap analysis y estrategia regulatoria para Costa Rica." />
+  <title>Cumplimiento Regulatorio — HeyReg</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -25,15 +25,19 @@ permalink: /services/regulatory-compliance
       </button>
       <nav id="nav-menu" class="navbar__menu" aria-label="Main navigation">
         <ul class="navbar__list">
-          <li class="navbar__item"><a href="/"   class="navbar__link" data-nav="home"    data-i18n="nav_home">Inicio</a></li>
+          <li class="navbar__item"><a href="/"       class="navbar__link" data-nav="home"    data-i18n="nav_home">Inicio</a></li>
           <li class="navbar__item"><a href="/about"  class="navbar__link" data-nav="about"   data-i18n="nav_about">Quiénes Somos</a></li>
           <li class="navbar__item navbar__item--has-submenu">
             <a href="/services" class="navbar__link" data-nav="services" data-i18n="nav_services">Servicios</a>
             <ul class="submenu" aria-label="Services submenu">
-              <li><a href="/services/regulatory-compliance" data-nav="rc" data-i18n="nav_service_regulatory">Cumplimiento Regulatorio</a></li>
-              <li><a href="/services/permits-and-licenses"  data-nav="pl" data-i18n="nav_service_permits">Permisos y Licencias</a></li>
-              <li><a href="/services/government-relations"  data-nav="gr" data-i18n="nav_service_government">Relaciones Gubernamentales</a></li>
-              <li><a href="/services/risk-assessment"       data-nav="ra" data-i18n="nav_service_risk">Evaluación de Riesgos</a></li>
+              <li><a href="/services/regulatory-compliance"           data-nav="rc"  data-i18n="nav_service_regulatory">Cumplimiento Regulatorio</a></li>
+              <li><a href="/services/health-registrations"            data-nav="hr"  data-i18n="nav_service_hr">Inscripciones Sanitarias</a></li>
+              <li><a href="/services/health-record-maintenance"       data-nav="hrm" data-i18n="nav_service_hrm">Mantenimiento de Registros</a></li>
+              <li><a href="/services/pre-qualifications"              data-nav="pq"  data-i18n="nav_service_pq">Precalificaciones</a></li>
+              <li><a href="/services/official-first-batch-quality-control"                 data-nav="ce"  data-i18n="nav_service_ce">Control Estatal</a></li>
+              <li><a href="/services/regulatory-operational-services" data-nav="ros" data-i18n="nav_service_ros">Servicios Operativos</a></li>
+              <li><a href="/services/regulatory-process-automation"   data-nav="rpa" data-i18n="nav_service_rpa">Automatización Regulatoria</a></li>
+              <li><a href="/services/simple-translations"             data-nav="st"  data-i18n="nav_service_st">Traducciones Simples</a></li>
             </ul>
           </li>
           <li class="navbar__item"><a href="/contact" class="navbar__link" data-nav="contact" data-i18n="nav_contact">Contacto</a></li>
@@ -72,101 +76,138 @@ permalink: /services/regulatory-compliance
       <div class="container">
         <span class="section__label" data-i18n="rc_overview_label">Descripción del Servicio</span>
         <h2 class="section__title" id="rc-overview-heading" data-i18n="rc_overview_title">Cumpla con la Norma. Mantenga la Ventaja.</h2>
-        <p style="color:var(--color-gray-text);margin-bottom:var(--space-md);" data-i18n="rc_overview_p1">El cumplimiento regulatorio no es solo una obligación legal — es un activo estratégico.</p>
-        <p style="color:var(--color-gray-text);margin-bottom:var(--space-md);" data-i18n="rc_overview_p2">Nuestro servicio ofrece soporte integral: desde mapear su postura actual hasta implementar marcos de trabajo y monitorear cambios normativos.</p>
-        <p style="color:var(--color-gray-text);" data-i18n="rc_overview_p3">Trabajamos en sectores como farmacéutico, servicios financieros, energía, alimentos y bebidas, y telecomunicaciones.</p>
+        <p style="color:var(--color-gray-text);" data-i18n="rc_overview_p1">Evaluamos sus productos para asegurar su conformidad con el marco regulatorio costarricense.</p>
       </div>
     </section>
 
-    <!-- ===== WHAT'S INCLUDED ===== -->
-    <section class="section section--gray" id="included" aria-labelledby="rc-included-heading">
+    <!-- ===== SERVICE SCOPE ===== -->
+    <section class="section section--gray" id="scope" aria-labelledby="rc-scope-heading">
       <div class="container">
-        <span class="section__label" data-i18n="rc_included_label">Qué Incluye</span>
-        <h2 class="section__title" id="rc-included-heading" data-i18n="rc_included_title">Entregables del Servicio</h2>
-        <ul class="included-list" aria-label="Service deliverables">
-          <li data-i18n="rc_inc1">Mapeo del panorama regulatorio y análisis de brechas</li>
-          <li data-i18n="rc_inc2">Diseño e implementación de marcos de cumplimiento</li>
-          <li data-i18n="rc_inc3">Apoyo en auditorías internas y revisiones de preparación</li>
-          <li data-i18n="rc_inc4">Documentación de políticas y procedimientos</li>
-          <li data-i18n="rc_inc5">Capacitación del personal y talleres de cultura de cumplimiento</li>
-          <li data-i18n="rc_inc6">Monitoreo regulatorio continuo y sistema de alertas</li>
+        <span class="section__label" id="rc-scope-heading" data-i18n="rc_included_label">Alcance del Servicio</span>
+        <h2 class="section__title" data-i18n="rc_included_title">Qué Incluye</h2>
+        <ul class="included-list" aria-label="Service scope">
+          <li data-i18n="rc_inc1">Revisión técnica y regulatoria del producto</li>
+          <li data-i18n="rc_inc2">Clasificación regulatoria según normativa costarricense</li>
+          <li data-i18n="rc_inc3">Análisis de requisitos aplicables</li>
+          <li data-i18n="rc_inc4">Evaluación de documentación técnica (dossier)</li>
+          <li data-i18n="rc_inc5">Identificación de brechas (gap analysis)</li>
+          <li data-i18n="rc_inc6">Recomendaciones para cumplimiento regulatorio</li>
+          <li data-i18n="rc_inc7">Asesoría estratégica para el proceso de registro</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== DELIVERABLES ===== -->
+    <section class="section" id="deliverables" aria-labelledby="rc-deliverables-heading">
+      <div class="container">
+        <span class="section__label" data-i18n="rc_deliverables_label">Entregables</span>
+        <h2 class="section__title" id="rc-deliverables-heading" data-i18n="rc_deliverables_title">Entregables del Servicio</h2>
+        <ul class="included-list" aria-label="Deliverables">
+          <li data-i18n="rc_del1">Informe de evaluación regulatoria</li>
+          <li data-i18n="rc_del2">Lista de requisitos específicos aplicables al producto</li>
+          <li data-i18n="rc_del3">Análisis de brechas con acciones recomendadas</li>
+          <li data-i18n="rc_del4">Estrategia regulatoria sugerida para registro sanitario</li>
+          <li data-i18n="rc_del5">Observaciones sobre documentación técnica</li>
         </ul>
       </div>
     </section>
 
     <!-- ===== WHO IS THIS FOR ===== -->
-    <section class="section" id="who" aria-labelledby="rc-who-heading">
-      <div class="container who-is-this__inner">
-        <span class="section__label" data-i18n="rc_who_label">Ideal Para</span>
+    <section class="section section--gray" id="audience" aria-labelledby="rc-who-heading">
+      <div class="container">
+        <span class="section__label" data-i18n="rc_ideal_label">Ideal Para</span>
         <h2 class="section__title" id="rc-who-heading" data-i18n="rc_who_title">¿Para Quién Es Este Servicio?</h2>
-        <p class="who-is-this__text" data-i18n="rc_who_text">Este servicio es ideal para empresas que ingresan a un nuevo mercado regulado, organizaciones que han recibido una notificación regulatoria, y equipos directivos que buscan una garantía de cumplimiento proactiva.</p>
+        <ul class="included-list" aria-label="Who is this service for">
+          <li data-i18n="rc_ideal1">Empresas que desean ingresar al mercado costarricense</li>
+          <li data-i18n="rc_ideal2">Productos nuevos en desarrollo o próximos a registrarse</li>
+          <li data-i18n="rc_ideal3">Portafolios que requieren validación regulatoria previa</li>
+          <li data-i18n="rc_ideal4">Empresas que buscan reducir riesgos antes de invertir en registros</li>
+          <li data-i18n="rc_who1">Laboratorios farmacéuticos</li>
+          <li data-i18n="rc_who2">Empresas de dispositivos médicos</li>
+          <li data-i18n="rc_who3">Compañías de productos naturales y suplementos</li>
+          <li data-i18n="rc_who4">Distribuidores y droguerías</li>
+          <li data-i18n="rc_who5">Startups del sector salud</li>
+          <li data-i18n="rc_who6">Empresas internacionales sin presencia local en Costa Rica</li>
+        </ul>
       </div>
     </section>
 
-    <!-- ===== PROCESS ===== -->
-    <section class="section section--gray" id="process" aria-labelledby="rc-process-heading">
+    <!-- ===== HOW WE WORK + PROCESS ===== -->
+    <section class="section" id="process" aria-labelledby="rc-process-heading">
       <div class="container">
-        <span class="section__label" data-i18n="rc_process_label">Cómo Trabajamos</span>
+        <span class="section__label" data-i18n="rc_how_label">Cómo Trabajamos</span>
         <h2 class="section__title" id="rc-process-heading" data-i18n="rc_process_title">Nuestro Proceso</h2>
+        <p style="color:var(--color-gray-text);margin-bottom:var(--space-lg);" data-i18n="rc_how_text">Trabajamos de forma estructurada, ágil y colaborativa.</p>
         <div class="step-timeline" role="list">
           <div class="step" role="listitem">
             <div class="step__number" aria-hidden="true">1</div>
-            <h3 class="step__title" data-i18n="rc_step1_title">Diagnóstico</h3>
-            <p class="step__desc" data-i18n="rc_step1_desc">Revisamos sus operaciones actuales, la documentación existente y las regulaciones aplicables.</p>
+            <h3 class="step__title" data-i18n="rc_step1_title">Recepción de Información</h3>
+            <p class="step__desc" data-i18n="rc_step1_desc">Recopilamos la información técnica y documentación disponible del producto.</p>
           </div>
           <div class="step" role="listitem">
             <div class="step__number" aria-hidden="true">2</div>
-            <h3 class="step__title" data-i18n="rc_step2_title">Evaluación</h3>
-            <p class="step__desc" data-i18n="rc_step2_desc">Identificamos brechas de cumplimiento y clasificamos cada hallazgo por nivel de riesgo y urgencia.</p>
+            <h3 class="step__title" data-i18n="rc_step2_title">Clasificación Regulatoria</h3>
+            <p class="step__desc" data-i18n="rc_step2_desc">Determinamos la categoría del producto según la normativa vigente en Costa Rica.</p>
           </div>
           <div class="step" role="listitem">
             <div class="step__number" aria-hidden="true">3</div>
-            <h3 class="step__title" data-i18n="rc_step3_title">Diseño del Marco</h3>
-            <p class="step__desc" data-i18n="rc_step3_desc">Construimos un programa de cumplimiento a medida con políticas, procedimientos y controles.</p>
+            <h3 class="step__title" data-i18n="rc_step3_title">Análisis Normativo</h3>
+            <p class="step__desc" data-i18n="rc_step3_desc">Identificamos los requisitos regulatorios aplicables.</p>
           </div>
           <div class="step" role="listitem">
             <div class="step__number" aria-hidden="true">4</div>
-            <h3 class="step__title" data-i18n="rc_step4_title">Implementación y Monitoreo</h3>
-            <p class="step__desc" data-i18n="rc_step4_desc">Apoyamos la implementación y establecemos un monitoreo continuo para que el cumplimiento no decaiga.</p>
+            <h3 class="step__title" data-i18n="rc_step4_title">Evaluación Documental</h3>
+            <p class="step__desc" data-i18n="rc_step4_desc">Revisamos el dossier técnico y documentación disponible.</p>
+          </div>
+          <div class="step" role="listitem">
+            <div class="step__number" aria-hidden="true">5</div>
+            <h3 class="step__title" data-i18n="rc_step5_title">Análisis de Brechas</h3>
+            <p class="step__desc" data-i18n="rc_step5_desc">Detectamos faltantes, inconsistencias o riesgos regulatorios.</p>
+          </div>
+          <div class="step" role="listitem">
+            <div class="step__number" aria-hidden="true">6</div>
+            <h3 class="step__title" data-i18n="rc_step6_title">Definición de Estrategia</h3>
+            <p class="step__desc" data-i18n="rc_step6_desc">Proponemos la mejor ruta para cumplir con los requisitos regulatorios.</p>
+          </div>
+          <div class="step" role="listitem">
+            <div class="step__number" aria-hidden="true">7</div>
+            <h3 class="step__title" data-i18n="rc_step7_title">Entrega de Informe</h3>
+            <p class="step__desc" data-i18n="rc_step7_desc">Presentamos un reporte claro con hallazgos, recomendaciones y próximos pasos.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ===== RELATED SERVICES ===== -->
-    <section class="section" id="related" aria-labelledby="rc-related-heading">
+    <section class="section section--gray" id="related" aria-labelledby="rc-related-heading">
       <div class="container">
         <span class="section__label" data-i18n="rc_related_label">Servicios Relacionados</span>
         <h2 class="section__title" id="rc-related-heading" data-i18n="rc_related_title">También Podría Necesitar</h2>
         <div class="related-services__grid">
-
           <article class="service-card">
             <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="36" height="36"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="36" height="36"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
             </div>
-            <h3 class="service-card__title" data-i18n="nav_service_permits">Permisos y Licencias</h3>
-            <p class="service-card__desc" data-i18n="home_svc2_desc">Obtenemos, renovamos y mantenemos permisos y licencias ante autoridades locales, nacionales e internacionales.</p>
-            <a href="/services/permits-and-licenses" class="service-card__link" data-i18n="btn_learn_more">Conocer Más →</a>
+            <h3 class="service-card__title" data-i18n="nav_service_hr">Inscripciones Sanitarias</h3>
+            <p class="service-card__desc" data-i18n="home_svc2_desc">Gestionamos el proceso completo de inscripción de sus productos ante el Ministerio de Salud.</p>
+            <a href="/services/health-registrations" class="service-card__link" data-i18n="btn_learn_more">Conocer Más →</a>
           </article>
-
           <article class="service-card">
             <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="36" height="36"><path d="M3 21h18M3 10h18M3 7l9-4 9 4M4 10h1v11H4V10zm6 0h1v11h-1V10zm5 0h1v11h-1V10zm5 0h1v11h-1V10z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="36" height="36"><path d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
             </div>
-            <h3 class="service-card__title" data-i18n="nav_service_government">Relaciones Gubernamentales</h3>
-            <p class="service-card__desc" data-i18n="home_svc3_desc">Facilitamos la comunicación y negociación con organismos reguladores para defender sus intereses.</p>
-            <a href="/services/government-relations" class="service-card__link" data-i18n="btn_learn_more">Conocer Más →</a>
+            <h3 class="service-card__title" data-i18n="nav_service_hrm">Mantenimiento de Registros</h3>
+            <p class="service-card__desc" data-i18n="home_svc3_desc">Realizamos actualizaciones y renovaciones para mantener sus productos en cumplimiento continuo.</p>
+            <a href="/services/health-record-maintenance" class="service-card__link" data-i18n="btn_learn_more">Conocer Más →</a>
           </article>
-
           <article class="service-card">
             <div class="service-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="36" height="36"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="36" height="36"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </div>
-            <h3 class="service-card__title" data-i18n="nav_service_risk">Evaluación de Riesgos</h3>
-            <p class="service-card__desc" data-i18n="home_svc4_desc">Identificamos y mitigamos riesgos regulatorios con planes estratégicos efectivos y preventivos.</p>
-            <a href="/services/risk-assessment" class="service-card__link" data-i18n="btn_learn_more">Conocer Más →</a>
+            <h3 class="service-card__title" data-i18n="nav_service_ros">Servicios Operativos Regulatorios</h3>
+            <p class="service-card__desc" data-i18n="home_svc6_desc">Ofrecemos representación legal y profesional responsable ante el Ministerio de Salud.</p>
+            <a href="/services/regulatory-operational-services" class="service-card__link" data-i18n="btn_learn_more">Conocer Más →</a>
           </article>
-
         </div>
       </div>
     </section>
@@ -174,13 +215,13 @@ permalink: /services/regulatory-compliance
     <!-- ===== CTA ===== -->
     <section class="cta-banner" aria-label="Call to action">
       <div class="container">
-        <h2 class="cta-banner__title" data-i18n="rc_cta_title">¿Listo para fortalecer su cumplimiento?</h2>
-        <span class="cta-banner__subtitle" data-i18n="rc_cta_subtitle">Contáctenos hoy y construyamos un programa de cumplimiento que proteja su empresa.</span>
+        <h2 class="cta-banner__title" data-i18n="rc_cta_title">¿Listo para evaluar su cumplimiento regulatorio?</h2>
+        <span class="cta-banner__subtitle" data-i18n="rc_cta_subtitle">Contáctenos hoy y definamos la mejor ruta para llevar su producto al mercado.</span>
         <div class="cta-banner__actions">
           <a href="#" data-config="whatsapp" class="btn btn--whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
             <span data-i18n="btn_chat_whatsapp">Escribir por WhatsApp</span>
           </a>
-          <a href="/contact" class="btn btn--outline" data-i18n="btn_send_email">Enviar Correo</a>
+          <a href="/contact" class="btn btn--outline" data-i18n="btn_contact_us">Contáctenos</a>
         </div>
       </div>
     </section>

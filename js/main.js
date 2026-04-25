@@ -151,6 +151,10 @@
       });
     });
 
+    /* Show or hide the team grid based on config */
+    const teamGrid = document.querySelector('.team-grid');
+    if (teamGrid) teamGrid.style.display = siteConfig.showTeam === false ? 'none' : '';
+
     /* Apply team member name, photo, and LinkedIn link */
     (siteConfig.team || []).forEach((member, i) => {
       const card = document.querySelector(`[data-config-member="${i}"]`);

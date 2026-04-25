@@ -43,11 +43,14 @@ const siteConfig = {
   },
 
   /* ---- Team members -------------------------------------------------
+     showTeam: set to false to hide the entire team grid on the About page
      name    : displayed on the team card (not translated — proper names)
      photo   : path to portrait photo, e.g. 'img/nicole.jpg' ('' = placeholder)
      linkedin: full LinkedIn profile URL ('' = icon hidden)
      role    : translations.js handles the bilingual role label
      ----------------------------------------------------------------- */
+  showTeam: false,
+
   team: [
     {
       name:     'Nicole Moya',

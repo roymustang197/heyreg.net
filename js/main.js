@@ -151,9 +151,9 @@
       });
     });
 
-    /* Show or hide the team grid based on config */
-    const teamGrid = document.querySelector('.team-grid');
-    if (teamGrid) teamGrid.style.display = siteConfig.showTeam === false ? 'none' : '';
+    /* Show or hide the entire team section based on config */
+    const teamSection = document.querySelector('#team');
+    if (teamSection) teamSection.style.display = siteConfig.showTeam === false ? 'none' : '';
 
     /* Apply team member name, photo, and LinkedIn link */
     (siteConfig.team || []).forEach((member, i) => {

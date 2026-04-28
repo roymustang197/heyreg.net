@@ -1165,6 +1165,23 @@ button { font-family: var(--font-body); }
   padding-top: var(--space-xs);
 }
 
+.form-input--error,
+.form-select--error,
+.form-textarea--error {
+  border-color: #e53e3e;
+  box-shadow: 0 0 0 3px rgba(229,62,62,0.15);
+}
+
+.form-field-error {
+  color: #e53e3e;
+  font-size: var(--fs-sm);
+  margin-top: 0.25rem;
+}
+
+.h-captcha {
+  margin-top: var(--space-xs);
+}
+
 /* ============================================================
    FOOTER
    ============================================================ */

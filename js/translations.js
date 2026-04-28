@@ -84,6 +84,8 @@ const translations = {
     form_service_other:       "Other / Not sure",
     form_submit_btn:          "Send Message",
     form_required_note:       "Fields marked with * are required.",
+    form_email_invalid:       "Please enter a valid email address.",
+    form_captcha_required:    "Please complete the captcha before submitting.",
 
     home_about_label: "About Us",
     home_about_title: "Regulatory Affairs, Simplified",
@@ -863,6 +865,8 @@ const translations = {
     form_service_other:       "Otro / No estoy seguro",
     form_submit_btn:          "Enviar Mensaje",
     form_required_note:       "Los campos marcados con * son obligatorios.",
+    form_email_invalid:       "Por favor ingrese un correo electrónico válido.",
+    form_captcha_required:    "Por favor complete el captcha antes de enviar.",
 
     home_about_label: "Sobre Nosotros",
     home_about_title: "Asuntos Regulatorios sin Complicaciones",

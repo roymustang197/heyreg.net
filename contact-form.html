@@ -95,6 +95,13 @@ permalink: /contact-form
             method="POST"
             novalidate
           >
+            <!-- Formsubmit config — values set by main.js from config.js -->
+            <input type="hidden" name="_cc"       id="form-cc">
+            <input type="hidden" name="_subject"  value="Nueva consulta — HeyReg">
+            <input type="hidden" name="_captcha"  value="false">
+            <input type="hidden" name="_template" value="table">
+            <!-- Honeypot: invisible to real users, bots fill it in -->
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
 
             <!-- Row 1: Name + Company -->
             <div class="form-row">
@@ -147,6 +154,7 @@ permalink: /contact-form
                   data-i18n-placeholder="form_placeholder_email"
                   placeholder="su@correo.com"
                 />
+                <p id="email-error" class="form-field-error" style="display:none" data-i18n="form_email_invalid">Por favor ingrese un correo electrónico válido.</p>
               </div>
               <div class="form-group">
                 <label class="form-label" for="field-phone">
@@ -206,6 +214,10 @@ permalink: /contact-form
               ></textarea>
             </div>
 
+            <!-- hCaptcha — rendered by main.js when hcaptchaSiteKey is set in config.js -->
+            <div id="hcaptcha-container"></div>
+            <p id="captcha-error" class="form-field-error" style="display:none" data-i18n="form_captcha_required">Por favor complete el captcha antes de enviar.</p>
+
             <!-- Submit row -->
             <div class="form-submit">
               <button type="submit" class="btn btn--primary" aria-label="Submit contact form">
@@ -256,6 +268,52 @@ permalink: /contact-form
   <script src="js/config.js"></script>
   <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    /* Form validation — email format + hCaptcha check */
+    (function () {
+      var form       = document.getElementById('contact-form');
+      var emailInput = document.getElementById('field-email');
+      var emailError = document.getElementById('email-error');
+      var captchaErr = document.getElementById('captcha-error');
+
+      function validEmail(v) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+      }
+
+      if (emailInput) {
+        emailInput.addEventListener('input', function () {
+          emailInput.classList.remove('form-input--error');
+          if (emailError) emailError.style.display = 'none';
+        });
+      }
+
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          var ok = true;
+
+          /* Email validation */
+          if (emailInput && !validEmail(emailInput.value)) {
+            e.preventDefault();
+            emailInput.classList.add('form-input--error');
+            if (emailError) emailError.style.display = 'block';
+            if (ok) emailInput.focus();
+            ok = false;
+          }
+
+          /* hCaptcha check — only when the widget is loaded */
+          if (typeof hcaptcha !== 'undefined') {
+            if (!hcaptcha.getResponse()) {
+              e.preventDefault();
+              if (captchaErr) captchaErr.style.display = 'block';
+              ok = false;
+            } else {
+              if (captchaErr) captchaErr.style.display = 'none';
+            }
+          }
+        });
+      }
+    })();
+  </script>
   <script>
     /* Translate placeholder attributes — data-i18n only targets textContent,
        so placeholders need a separate pass after applyLanguage runs.        */

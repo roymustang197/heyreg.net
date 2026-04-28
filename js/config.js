@@ -26,8 +26,8 @@ const siteConfig = {
   foundingDate: '2022-04-18',
 
   /* ---- Contact & social ---- */
-  whatsapp:     '50662889402',          // raw digits — used to build wa.me URLs
-  phoneDisplay: '+506 6288-9402',       // formatted number shown as text on contact page
+  whatsapp:     '50684671912',          // raw digits — used to build wa.me URLs
+  phoneDisplay: '+506 8467-1912',       // formatted number shown as text on contact page
   emailAddress: 'contact@heyreg.net',   // shown as text + used for mailto: links
   linkedin:     'https://www.linkedin.com/company/heyreg/',
   instagram:    'https://www.linkedin.com/company/heyreg/',
@@ -63,6 +63,17 @@ const siteConfig = {
       linkedin: 'https://www.linkedin.com/in/wezhema/',   // e.g. 'https://www.linkedin.com/in/wei-zheng/'
     },
   ],
+
+  /* ---- Contact form -------------------------------------------------
+     emailPrimary    : first recipient (the form is submitted to this address)
+     emailCC         : second recipient (receives a carbon copy)
+     hcaptchaSiteKey : get a free key at hcaptcha.com — leave '' to skip captcha
+     ----------------------------------------------------------------- */
+  contact: {
+    emailPrimary:    'wzheng@heyreg.net',
+    emailCC:         'nmoya@heyreg.net',
+    hcaptchaSiteKey: '5b801d1e-e606-47c6-82ac-e93034009daa',   // paste your hCaptcha site key here
+  },
 
   /* ---- Color palette ---- */
   /*

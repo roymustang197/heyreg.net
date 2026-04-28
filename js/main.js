@@ -151,6 +151,28 @@
       });
     });
 
+    /* Contact form — recipients + hCaptcha */
+    const cf = siteConfig.contact;
+    if (cf) {
+      const form = document.getElementById('contact-form');
+      if (form && cf.emailPrimary) {
+        form.action = 'https://formsubmit.co/' + cf.emailPrimary;
+      }
+      const ccField = document.getElementById('form-cc');
+      if (ccField && cf.emailCC) ccField.value = cf.emailCC;
+
+      if (cf.hcaptchaSiteKey) {
+        const container = document.getElementById('hcaptcha-container');
+        if (container) {
+          container.innerHTML = '<div class="h-captcha" data-sitekey="' + cf.hcaptchaSiteKey + '"></div>';
+          const s = document.createElement('script');
+          s.src = 'https://js.hcaptcha.com/1/api.js';
+          s.async = true;
+          document.head.appendChild(s);
+        }
+      }
+    }
+
     /* Show or hide the entire team section based on config */
     const teamSection = document.querySelector('#team');
     if (teamSection) teamSection.style.display = siteConfig.showTeam === false ? 'none' : '';

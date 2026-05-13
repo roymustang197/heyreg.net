@@ -106,6 +106,7 @@
           document.head.appendChild(link);
         }
         link.href = b.favicon;
+        if (b.favicon.endsWith('.svg')) link.type = 'image/svg+xml';
       }
     }
 

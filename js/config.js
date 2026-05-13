@@ -16,7 +16,7 @@ const siteConfig = {
     text2:   'Reg',        // rendered in main color
     logo:    '',           // e.g. 'img/logo.svg'
     logoAlt: 'HeyReg',
-    favicon: '',           // browser tab icon, e.g. 'img/favicon.png' or 'img/favicon.ico'
+    favicon: '/img/favicon.svg',
   },
 
   /* ---- Founding date -----------------------------------------------
@@ -76,60 +76,6 @@ const siteConfig = {
   },
 
   /* ---- Color palette ---- */
-  /*
-  colors: {
-    main:            '#6366F1',   // primary — headings, navbar, buttons
-    mainDark:        '#4338CA',   // darker variant (gradients, footer)
-    mainLight:       '#818CF8',   // lighter variant
-    secondary:       '#F59E0B',   // accent — labels, links, icons
-    secondaryDark:   '#D97706',   // hover state for secondary
-    secondaryLight:  '#FEF3C7',   // tinted backgrounds
-    background:      '#FFFFFF',   // page background
-    text:            '#1E1B4B',   // body text
-
-    whatsapp:        '#25d366',   // WhatsApp button
-    whatsappDark:    '#1ebe5c',   // WhatsApp button hover
-    email:           '#6b7280',   // Email button
-    emailDark:       '#4b5563',   // Email button hover
-  },
-*/
-
- /*
-  colors: {
-    main:            '#1a2e5a',   // primary — headings, navbar, buttons
-    mainDark:        '#111f3f',   // darker variant (gradients, footer)
-    mainLight:       '#66A3FF',   // lighter variant
-    secondary:       '#00D4AA',   // accent — labels, links, icons
-    secondaryDark:   '#00A888',   // hover state for secondary
-    secondaryLight:  '#CCFAF4',   // tinted backgrounds
-    background:      '#FFFFFF',   // page background
-    text:            '#0A0A0A',   // body text
-
-    whatsapp:        '#25d366',   // WhatsApp button
-    whatsappDark:    '#1ebe5c',   // WhatsApp button hover
-    email:           '#6b7280',   // Email button
-    emailDark:       '#4b5563',   // Email button hover
-  },
-  */
-
-
-  /*
-  colors: {
-    main:            '#00C48C',   // primary — headings, navbar, buttons
-    mainDark:        '#009E70',   // darker variant (gradients, footer)
-    mainLight:       '#4DDDB0',   // lighter variant
-    secondary:       '#111827',   // accent — labels, links, icons
-    secondaryDark:   '#0A0F1A',   // hover state for secondary
-    secondaryLight:  '#1F2937',   // tinted backgrounds
-    background:      '#F9FAFB',   // page background
-    text:            '#111827',   // body text
-
-    whatsapp:        '#25d366',   // WhatsApp button
-    whatsappDark:    '#1ebe5c',   // WhatsApp button hover
-    email:           '#6b7280',   // Email button
-    emailDark:       '#4b5563',   // Email button hover
-  },
-  */
 
     colors: {
     main:            '#16213A',   // Ink — primary headings, navbar, buttons

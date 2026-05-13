@@ -31,6 +31,7 @@ const translations = {
     nav_service_st:         "Simple Translations",
 
     /* ---- Shared: Footer ---- */
+    brand_tagline:  "Regulatory Affairs",
     footer_tagline: "Regulatory experts. Partners in your growth.",
     footer_copy:    "© 2026 HeyReg. All rights reserved.",
     footer_privacy: "Privacy Policy",
@@ -812,6 +813,7 @@ const translations = {
     nav_service_st:         "Traducciones Simples",
 
     /* ---- Shared: Footer ---- */
+    brand_tagline:  "Asuntos Regulatorios",
     footer_tagline: "Expertos en regulación. Aliados en su crecimiento.",
     footer_copy:    "© 2026 HeyReg. Todos los derechos reservados.",
     footer_privacy: "Política de Privacidad",

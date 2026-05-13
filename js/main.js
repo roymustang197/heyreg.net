@@ -166,6 +166,19 @@
           accent: 'var(--color-teal)',
         });
       }
+
+      /* About page brand lockup */
+      var aboutSealEl = document.getElementById('about-seal');
+      if (aboutSealEl) {
+        aboutSealEl.innerHTML = heyreg_seal(180, { accent: 'var(--color-teal)' });
+      }
+    }
+
+    if (typeof heyreg_wordmark === 'function') {
+      var aboutWordmarkEl = document.getElementById('about-wordmark');
+      if (aboutWordmarkEl) {
+        aboutWordmarkEl.innerHTML = heyreg_wordmark(44);
+      }
     }
 
     /* Contact form — recipients + hCaptcha */

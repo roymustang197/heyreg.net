@@ -20,6 +20,8 @@
   /* ---- Two-column prose+image layouts: stack vertically ---- */
   .about-preview__inner    { grid-template-columns: 1fr; gap: var(--space-xl); }
   .story__inner            { grid-template-columns: 1fr; gap: var(--space-xl); }
+  .brand-lockup            { flex-direction: column; align-items: center; gap: var(--space-lg); }
+  .brand-lockup__text      { align-items: center; }
 }
 
 
@@ -94,7 +96,8 @@
 
   /* ---- Hero ---- */
   .hero__content  { grid-template-columns: 1fr; }
-  .hero__seal     { display: none; }
+  .hero__seal     { display: flex; justify-content: center; margin-top: var(--space-lg); }
+  .hero__seal svg { width: 150px; height: 150px; }
   .hero__title    { font-size: var(--fs-3xl); }
   .hero__subtitle { font-size: var(--fs-base); }
 
@@ -123,6 +126,8 @@
   /* ---- About page ---- */
   .story__inner  { grid-template-columns: 1fr; gap: var(--space-xl); }
   .mv__grid      { grid-template-columns: 1fr; }
+  .brand-lockup  { flex-direction: column; align-items: center; gap: var(--space-lg); }
+  .brand-lockup__text { align-items: center; }
   .values-grid   { grid-template-columns: repeat(2, 1fr); }
 
   /* ---- Service detail ---- */
@@ -146,6 +151,7 @@
   .hero__title    { font-size: var(--fs-2xl); }
   .hero__subtitle { font-size: var(--fs-sm); }
   .hero__cta      { flex-direction: column; }
+  .hero__seal svg { width: 120px; height: 120px; }
 
   /* ---- Buttons ---- */
   .btn { width: 100%; justify-content: center; }

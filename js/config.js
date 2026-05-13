@@ -132,19 +132,19 @@ const siteConfig = {
   */
 
     colors: {
-    main:            '#0A5C8A',   // primary — azul médico profundo
-    mainDark:        '#074268',   // darker variant (gradients, footer)
-    mainLight:       '#4A90BA',   // lighter variant
-    secondary:       '#27AE60',   // accent — verde salud
-    secondaryDark:   '#1E8449',   // hover state for secondary
-    secondaryLight:  '#D5F5E3',   // tinted backgrounds
-    background:      '#FFFFFF',   // page background
-    text:            '#0D2137',   // body text
+    main:            '#16213A',   // Ink — primary headings, navbar, buttons
+    mainDark:        '#0D1524',   // Ink Dark — footer, deep surfaces
+    mainLight:       '#475573',   // Support — lighter variant
+    secondary:       '#C29A3A',   // Accent — gold
+    secondaryDark:   '#A07E2E',   // Accent Dark — hover
+    secondaryLight:  '#E2C77D',   // Acc·Lt — tinted backgrounds
+    background:      '#E9E2D2',   // Cream — page background
+    text:            '#16213A',   // Ink — body text
 
-    whatsapp:        '#25d366',   // WhatsApp button
-    whatsappDark:    '#1ebe5c',   // WhatsApp button hover
-    email:           '#6b7280',   // Email button
-    emailDark:       '#4b5563',   // Email button hover
+    whatsapp:        '#25d366',
+    whatsappDark:    '#1ebe5c',
+    email:           '#6b7280',
+    emailDark:       '#4b5563',
   },
   
 

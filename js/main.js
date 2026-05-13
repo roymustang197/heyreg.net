@@ -77,12 +77,17 @@
     const b = siteConfig.brand;
     if (b) {
       const isImg = !!b.logo;
+      const hasSvg = typeof heyreg_wordmark === 'function';
       const navHTML    = isImg
         ? `<img src="${b.logo}" alt="${b.logoAlt || b.name}" class="navbar__logo-img">`
-        : `<span class="logo-accent">${b.text1 || ''}</span>${b.text2 || ''}`;
+        : hasSvg
+          ? heyreg_wordmark(32)
+          : `<span class="logo-accent">${b.text1 || ''}</span>${b.text2 || ''}`;
       const footerHTML = isImg
         ? `<img src="${b.logo}" alt="${b.logoAlt || b.name}" class="footer__logo-img">`
-        : `<span class="logo-accent">${b.text1 || ''}</span>${b.text2 || ''}`;
+        : hasSvg
+          ? heyreg_wordmark(28)
+          : `<span class="logo-accent">${b.text1 || ''}</span>${b.text2 || ''}`;
 
       document.querySelectorAll('.navbar__logo').forEach(el => {
         el.innerHTML = navHTML;
@@ -150,6 +155,18 @@
         }
       });
     });
+
+    /* Hero seal */
+    if (typeof heyreg_seal === 'function') {
+      var sealEl = document.getElementById('hero-seal');
+      if (sealEl) {
+        sealEl.innerHTML = heyreg_seal(200, {
+          ring:   'rgba(255,255,255,0.55)',
+          center: 'rgba(255,255,255,0.88)',
+          accent: 'var(--color-teal)',
+        });
+      }
+    }
 
     /* Contact form — recipients + hCaptcha */
     const cf = siteConfig.contact;

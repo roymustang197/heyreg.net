@@ -148,9 +148,9 @@ const translations = {
     about_mv_label:       "Our Direction",
     about_mv_title:       "Mission & Vision",
     about_mission_title:  "Mission",
-    about_mission_text:   "To facilitate our clients' regulatory compliance with precise, agile, and high-impact solutions that protect their operations and unlock growth.",
+    about_mission_text:   "To make health registration a clear and precise process; so that pharmaceuticals, medical devices, biologics, food products, supplements, and natural products reach those who need them, without delay or detours.",
     about_vision_title:   "Vision",
-    about_vision_text:    "To be the leading regulatory consulting firm in Latin America and beyond, recognized for integrity, expertise, and measurable client outcomes.",
+    about_vision_text:    "For every company that wants to operate in the health ecosystem of Costa Rica and Latin America to choose us first: for the precision of our work and the clarity with which we deliver it.",
 
     about_values_label: "Our Values",
     about_values_title: "What We Stand For",
@@ -930,9 +930,9 @@ const translations = {
     about_mv_label:       "Nuestra Dirección",
     about_mv_title:       "Misión & Visión",
     about_mission_title:  "Misión",
-    about_mission_text:   "Facilitar el cumplimiento regulatorio de nuestros clientes con soluciones precisas, ágiles y de alto impacto que protejan sus operaciones y abran nuevas oportunidades de crecimiento.",
+    about_mission_text:   "Hacer del registro sanitario un proceso claro y certero; para que medicamentos, dispositivos médicos, biológicos, alimentos, suplementos y productos naturales lleguen a quien los necesita, sin demora ni rodeos.",
     about_vision_title:   "Visión",
-    about_vision_text:    "Ser la firma de consultoría regulatoria líder en América Latina y más allá, reconocida por su integridad, experiencia y resultados medibles para sus clientes.",
+    about_vision_text:    "Que toda empresa que quiera operar en el ecosistema sanitario de Costa Rica y América Latina nos elija primero: por la precisión de nuestro trabajo y la claridad con la que lo entregamos.",
 
     about_values_label: "Nuestros Valores",
     about_values_title: "En Lo Que Creemos",

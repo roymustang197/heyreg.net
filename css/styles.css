@@ -746,6 +746,9 @@ button { font-family: var(--font-body); }
   align-items: center;
 }
 
+.about-illustration { color: var(--color-navy); }
+[data-theme="dark"] .about-illustration { color: #c8d0e0; }
+
 .about-preview__text .section__title { margin-bottom: var(--space-md); }
 
 .about-preview__text p {

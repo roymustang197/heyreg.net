@@ -34,20 +34,21 @@ function heyreg_wordmark(size) {
 }
 
 /* ── Seal ─────────────────────────────────────────────────────
-   SVG circular seal: outer ring · inner ring · curved text · HR.
-   opts: { ring, center, accent, bg, topText, bottomText, showText }
+   SVG circular seal: outer ring · inner ring · curved bilingual
+   text · hR monogram · separator line · location text.
+   opts: { ring, center, accent, support, bg, topText, bottomText, showText }
    ------------------------------------------------------------ */
 function heyreg_seal(size, opts) {
   size = size || 120;
   opts = opts || {};
-  var ring       = opts.ring       || 'currentColor';
-  var center     = opts.center     || 'currentColor';
-  var accent     = opts.accent     || 'var(--color-teal)';
-  var bg         = opts.bg         || 'transparent';
+  var ring       = opts.ring    || 'currentColor';
+  var center     = opts.center  || 'currentColor';
+  var accent     = opts.accent  || 'var(--color-teal)';
+  var support    = opts.support || 'var(--color-navy-light)';
+  var bg         = opts.bg      || 'transparent';
   var topText    = opts.topText    !== undefined ? opts.topText    : 'ASUNTOS REGULATORIOS';
-  var bottomText = opts.bottomText !== undefined ? opts.bottomText : 'COSTA RICA · MMXXVI';
+  var bottomText = opts.bottomText !== undefined ? opts.bottomText : 'REGULATORY AFFAIRS';
   var showText   = opts.showText   !== false;
-  var tr = 40;
   var id = 'hr-seal-' + (Math.random() * 1e9 | 0).toString(36);
 
   var bgEl = bg !== 'transparent'
@@ -58,19 +59,21 @@ function heyreg_seal(size, opts) {
   if (showText) {
     textEl = (
       '<defs>' +
-        '<path id="' + id + 'T" d="M ' + (50-tr) + ',50 A ' + tr + ',' + tr + ' 0 0 1 ' + (50+tr) + ',50"/>' +
-        '<path id="' + id + 'B" d="M ' + (50-tr) + ',50 A ' + tr + ',' + tr + ' 0 0 0 ' + (50+tr) + ',50"/>' +
+        '<path id="' + id + 'T" d="M 12,50 A 38,38 0 0 1 88,50"/>' +
+        '<path id="' + id + 'B" d="M 8,50 A 42,42 0 0 0 92,50"/>' +
       '</defs>' +
-      '<text fill="' + ring + '" font-family="\'DM Sans\',sans-serif" font-size="5.4" letter-spacing="2.2" font-weight="600">' +
+      '<text fill="' + ring + '" font-family="\'DM Sans\',sans-serif" font-size="5" letter-spacing="2" font-weight="600">' +
         '<textPath href="#' + id + 'T" startOffset="50%" text-anchor="middle">' + topText + '</textPath>' +
       '</text>' +
       (bottomText
-        ? '<text fill="' + ring + '" font-family="\'DM Sans\',sans-serif" font-size="4.6" letter-spacing="2" font-weight="500">' +
+        ? '<text fill="' + ring + '" font-family="\'DM Sans\',sans-serif" font-size="5" letter-spacing="2" font-weight="600">' +
             '<textPath href="#' + id + 'B" startOffset="50%" text-anchor="middle" side="right">' + bottomText + '</textPath>' +
           '</text>'
         : '') +
-      '<rect x="8.7" y="48.7" width="2.6" height="2.6" transform="rotate(45 10 50)" fill="' + accent + '"/>' +
-      '<rect x="88.7" y="48.7" width="2.6" height="2.6" transform="rotate(45 90 50)" fill="' + accent + '"/>'
+      '<g fill="' + accent + '" transform="matrix(0.96494508,0,0,1,1.6670562,4)">' +
+        '<polygon points="6,50 9,47 12,50 9,53"/>' +
+        '<polygon points="88,50 91,47 94,50 91,53"/>' +
+      '</g>'
     );
   }
 
@@ -81,9 +84,14 @@ function heyreg_seal(size, opts) {
       '<circle cx="50" cy="50" r="46" fill="none" stroke="' + ring + '" stroke-width="0.8"/>' +
       '<circle cx="50" cy="50" r="34" fill="none" stroke="' + ring + '" stroke-width="0.4"/>' +
       textEl +
-      '<text x="50" y="60" text-anchor="middle"' +
-      ' font-family="\'Cormorant Garamond\',Georgia,serif"' +
-      ' font-size="32" fill="' + center + '" font-weight="500">HR</text>' +
+      '<text x="50" y="54" text-anchor="middle"' +
+      ' font-family="\'Newsreader\',Georgia,serif"' +
+      ' font-size="24" fill="' + center + '" font-weight="500" font-style="italic">h' +
+      '<tspan font-style="normal">R</tspan></text>' +
+      '<line x1="44" y1="60" x2="56" y2="60" stroke="' + support + '" stroke-width="0.3"/>' +
+      '<text x="50" y="66" text-anchor="middle"' +
+      ' font-family="\'DM Sans\',sans-serif"' +
+      ' font-size="2.6" letter-spacing="0.5" font-weight="600" fill="' + support + '">COSTA RICA \xb7 MMXXVI</text>' +
     '</svg>'
   );
 }

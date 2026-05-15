@@ -162,9 +162,10 @@
       var sealEl = document.getElementById('hero-seal');
       if (sealEl) {
         sealEl.innerHTML = heyreg_seal(200, {
-          ring:   'rgba(255,255,255,0.55)',
-          center: 'rgba(255,255,255,0.88)',
-          accent: 'var(--color-teal)',
+          ring:    'rgba(255,255,255,0.55)',
+          center:  'rgba(255,255,255,0.88)',
+          accent:  'var(--color-teal)',
+          support: 'rgba(255,255,255,0.4)',
         });
       }
 

@@ -248,7 +248,7 @@
     if (!page) return;
 
     /* Which nav key should be highlighted? */
-    const serviceDetailPages = ['rc', 'hr', 'hrm', 'pq', 'ce', 'ros', 'rpa', 'st'];
+    const serviceDetailPages = ['rc', 'hr', 'hrm', 'pq', 'ce', 'ros', 'st'];
     const activeKey = serviceDetailPages.includes(page) ? 'services' : page;
 
     /* Mark matching nav links */

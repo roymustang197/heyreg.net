@@ -249,14 +249,15 @@ button { font-family: var(--font-body); }
 }
 
 .navbar__link--cta {
-  background-color: var(--color-teal);
-  color: var(--color-white) !important;
+  border: 1.5px solid rgba(194,154,58,0.6);
+  color: var(--color-teal) !important;
   font-weight: 600;
 }
 
 .navbar__link--cta:hover {
-  background-color: var(--color-teal-dark);
-  color: var(--color-white) !important;
+  border-color: var(--color-teal);
+  background-color: rgba(194,154,58,0.1);
+  color: var(--color-teal) !important;
 }
 
 /* Submenu wrapper — hidden by default */

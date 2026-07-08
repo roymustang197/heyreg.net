@@ -28,6 +28,7 @@ const translations = {
     nav_service_pq:         "Pre-qualifications",
     nav_service_ce:         "State Control",
     nav_service_ros:        "Regulatory Operational Services",
+    nav_service_rpa:        "Regulatory Automation",
     nav_service_st:         "Simple Translations",
 
     /* ---- Shared: Footer ---- */
@@ -80,6 +81,7 @@ const translations = {
     form_service_pq:          "Pre-qualifications",
     form_service_ce:          "State Control",
     form_service_ros:         "Regulatory Operational Services",
+    form_service_rpa:         "Regulatory Automation",
     form_service_st:          "Simple Translations",
     form_service_other:       "Other / Not sure",
     form_submit_btn:          "Send Message",
@@ -108,6 +110,8 @@ const translations = {
     home_svc5_desc:  "If you have a pharmacy distributor (droguería) in Costa Rica, we help you carry out the first-batch analysis before LAYAFA.",
     home_svc6_title: "Regulatory Operational Services",
     home_svc6_desc:  "We offer legal representation and responsible professional services, assuming the formal role before the Ministry of Health and guaranteeing the technical and regulatory compliance of your products.",
+    home_svc7_title: "Regulatory Automation",
+    home_svc7_desc:  "HeyReg Hub centralizes your products' health registrations and notifies you automatically before every deadline, so your team is never caught off guard.",
     home_svc8_title: "Simple Translations",
     home_svc8_desc:  "We provide support in the translation of technical documents from English to Spanish, ensuring clarity and consistency in the submitted documentation.",
 
@@ -189,6 +193,8 @@ const translations = {
     services_svc5_desc:  "We support the state quality control process for the first batch of products before LAYAFA in Costa Rica, accompanying pharmacies in fulfilling this mandatory regulatory requirement.",
     services_svc6_title: "Regulatory Operational Services",
     services_svc6_desc:  "We provide legal representation and responsible professional services, assuming the formal role before the Ministry of Health and ensuring the continuous technical and regulatory compliance of your products.",
+    services_svc7_title: "Regulatory Automation",
+    services_svc7_desc:  "HeyReg Hub, our regulatory automation platform, centralizes registrations, documents, and expiration alerts for your entire portfolio.",
     services_svc8_title: "Simple Translations",
     services_svc8_desc:  "We provide support in the translation of technical and regulatory documents from English to Spanish, facilitating comprehension and submission for health procedures in Costa Rica.",
 
@@ -592,6 +598,32 @@ const translations = {
     ros_cta_subtitle: "Contact us and let us assume the formal regulatory role for your products.",
 
     /* ==========================================================
+       SERVICE DETAIL: REGULATORY AUTOMATION
+       ========================================================== */
+    rpa_hero_title:          "Regulatory Automation",
+    rpa_breadcrumb_home:     "Home",
+    rpa_breadcrumb_services: "Services",
+    rpa_breadcrumb_current:  "Regulatory Automation",
+    rpa_overview_label: "Service Overview",
+    rpa_overview_title: "HeyReg's Regulatory Automation",
+    rpa_overview_p1: "HeyReg Hub is HeyReg's regulatory automation platform. It centralizes your products' health registrations, associated legal and technical documentation, certificates, contracts, powers of attorney, and operating permits, and automatically notifies you before something expires, so your team never finds out about a deadline at the last minute. Built for both in-house regulatory teams and consultants managing several client companies at once, with per-user roles and permissions, a complete audit trail, and two-step verification.",
+    rpa_app_btn: "Go to HeyReg Hub",
+    rpa_features_label: "Platform Scope",
+    rpa_features_title: "What's Included",
+    rpa_feat1: "Registration and tracking of products (medicines and natural products) with all associated documentation.",
+    rpa_feat2: "Automatic alerts before health registrations, legal documents, certificates, contracts, powers of attorney, and operating permits expire, with configurable notice windows.",
+    rpa_feat3: "Document management with reuse across products, so you never upload the same document twice.",
+    rpa_feat4: "Certificates of Free Sale, Pharmaceutical Product, and Good Manufacturing Practices in a single module.",
+    rpa_feat5: "Analytics dashboard with counts by pharmaceutical form, product type, manufacturer, holder, and distributor.",
+    rpa_feat6: "Multi-company support: a single user can manage several client organizations without separate accounts — ideal for consultants.",
+    rpa_feat7: "Per-user roles and permissions (Read, Editor, Administrator) with an audit trail for every change.",
+    rpa_feat8: "Two-factor verification (2FA) to protect access to your regulatory information.",
+    rpa_related_label: "Related Services",
+    rpa_related_title: "You Might Also Need",
+    rpa_cta_title:    "Ready to automate your regulatory management?",
+    rpa_cta_subtitle: "Discover how HeyReg Hub simplifies deadline tracking and documentation for your entire portfolio.",
+
+    /* ==========================================================
        SERVICE DETAIL: SIMPLE TRANSLATIONS
        ========================================================== */
     st_hero_title:          "Simple Translations",
@@ -747,6 +779,7 @@ const translations = {
     nav_service_pq:         "Precalificaciones",
     nav_service_ce:         "Control Estatal",
     nav_service_ros:        "Servicios Operativos Regulatorios",
+    nav_service_rpa:        "Automatización Regulatoria",
     nav_service_st:         "Traducciones Simples",
 
     /* ---- Shared: Footer ---- */
@@ -799,6 +832,7 @@ const translations = {
     form_service_pq:          "Precalificaciones",
     form_service_ce:          "Control Estatal",
     form_service_ros:         "Servicios Operativos Regulatorios",
+    form_service_rpa:         "Automatización Regulatoria",
     form_service_st:          "Traducciones Simples",
     form_service_other:       "Otro / No estoy seguro",
     form_submit_btn:          "Enviar Mensaje",
@@ -827,6 +861,8 @@ const translations = {
     home_svc5_desc:  "Si cuenta con una droguería en Costa Rica, le ayudamos a realizar el análisis del primer lote ante LAYAFA.",
     home_svc6_title: "Servicios Operativos Regulatorios",
     home_svc6_desc:  "Ofrecemos servicios de representación legal y profesional responsable, asumiendo el rol formal ante el Ministerio de Salud y garantizando el cumplimiento técnico y regulatorio de sus productos.",
+    home_svc7_title: "Automatización Regulatoria",
+    home_svc7_desc:  "HeyReg Hub centraliza el registro sanitario de sus productos y notifica automáticamente antes de cada vencimiento, para que su equipo nunca se vea sorprendido.",
     home_svc8_title: "Traducciones Simples",
     home_svc8_desc:  "Brindamos apoyo en la traducción de documentos técnicos del inglés al español, asegurando claridad y coherencia en la documentación presentada.",
 
@@ -909,6 +945,8 @@ const translations = {
     services_svc5_desc:  "Brindamos apoyo en la gestión del Control Estatal de calidad del primer lote de productos ante LAYAFA en Costa Rica, acompañando a las droguerías en el cumplimiento de este requisito regulatorio obligatorio.",
     services_svc6_title: "Servicios Operativos Regulatorios",
     services_svc6_desc:  "Brindamos servicios de representación legal y profesional responsable, asumiendo el rol formal ante el Ministerio de Salud y garantizando el cumplimiento técnico y regulatorio continuo de sus productos.",
+    services_svc7_title: "Automatización Regulatoria",
+    services_svc7_desc:  "HeyReg Hub, nuestra plataforma de automatización regulatoria, centraliza registros, documentos y alertas de vencimiento de todo su portafolio.",
     services_svc8_title: "Traducciones Simples",
     services_svc8_desc:  "Brindamos apoyo en la traducción de documentos técnicos y regulatorios del inglés al español, facilitando la comprensión y presentación de información para trámites sanitarios en Costa Rica.",
 
@@ -1310,6 +1348,32 @@ const translations = {
     ros_related_title: "También Podría Necesitar",
     ros_cta_title:    "¿Necesita representación legal en Costa Rica?",
     ros_cta_subtitle: "Contáctenos y asumimos el rol regulatorio formal para sus productos.",
+
+    /* ==========================================================
+       SERVICE DETAIL: AUTOMATIZACIÓN REGULATORIA
+       ========================================================== */
+    rpa_hero_title:          "Automatización Regulatoria",
+    rpa_breadcrumb_home:     "Inicio",
+    rpa_breadcrumb_services: "Servicios",
+    rpa_breadcrumb_current:  "Automatización Regulatoria",
+    rpa_overview_label: "Descripción del Servicio",
+    rpa_overview_title: "La Automatización Regulatoria de HeyReg",
+    rpa_overview_p1: "HeyReg Hub es la plataforma de automatización regulatoria de HeyReg. Centraliza el registro sanitario de sus productos, la documentación legal y técnica asociada, los certificados, contratos, poderes y permisos de funcionamiento y notifica automáticamente antes de que algo venza, para que su equipo nunca vuelva a enterarse de un vencimiento a última hora. Pensada tanto para equipos regulatorios internos como para consultores que gestionan varias empresas cliente a la vez, con roles y permisos por usuario, historial completo de auditoría y verificación en dos pasos.",
+    rpa_app_btn: "Ir a HeyReg Hub",
+    rpa_features_label: "Alcance de la Plataforma",
+    rpa_features_title: "Qué Incluye",
+    rpa_feat1: "Registro y seguimiento de productos (medicamentos y productos naturales) con toda su documentación asociada.",
+    rpa_feat2: "Alertas automáticas antes del vencimiento de registros sanitarios, documentos legales, certificados, contratos, poderes y permisos de funcionamiento, con ventanas de aviso configurables.",
+    rpa_feat3: "Gestión documental con reutilización entre productos, para no volver a subir el mismo documento dos veces.",
+    rpa_feat4: "Certificados de Libre Venta, Producto Farmacéutico y Buenas Prácticas de Manufactura en un solo módulo.",
+    rpa_feat5: "Panel de analítica con conteos por forma farmacéutica, tipo de producto, fabricante, titular y distribuidora.",
+    rpa_feat6: "Soporte multi-empresa: un mismo usuario puede administrar varias organizaciones cliente sin cuentas separadas, ideal para consultores.",
+    rpa_feat7: "Roles y permisos por usuario (Lectura, Editor, Administrador) con historial de auditoría por cada cambio.",
+    rpa_feat8: "Verificación en dos pasos (2FA) para proteger el acceso a la información regulatoria.",
+    rpa_related_label: "Servicios Relacionados",
+    rpa_related_title: "También Podría Necesitar",
+    rpa_cta_title:    "¿Listo para automatizar su gestión regulatoria?",
+    rpa_cta_subtitle: "Descubra cómo HeyReg Hub simplifica el seguimiento de vencimientos y documentación de todo su portafolio.",
 
     /* ==========================================================
        SERVICE DETAIL: TRADUCCIONES SIMPLES
